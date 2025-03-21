@@ -1,32 +1,41 @@
-node_modules# Ignore Node modules
-node_modules/
-.next/
-out/
-dist/
+# See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
 
-# Ignore Logs
+# dependencies
+/node_modules
+/.pnp
+.pnp.*
+.yarn/*
+!.yarn/patches
+!.yarn/plugins
+!.yarn/releases
+!.yarn/versions
+
+# testing
+/coverage
+
+# next.js
+/.next/
+/out/
+
+# production
+/build
+
+# misc
+.DS_Store
+*.pem
+
+# debug
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
-pnpm-debug.log*
+.pnpm-debug.log*
 
-# Ignore Dependency Lock Files (Use only one)
-package-lock.json
-yarn.lock
-pnpm-lock.yaml
+# env files (can opt-in for committing if needed)
+.env*
 
-# Ignore Environment Variables
-.env
-.env.local
-.env.development
-.env.production
-.env.test
+# vercel
+.vercel
 
-# Ignore Firebase Config
-firebase-debug.log
-firebase.json
-.firebaserc
-
-# Ignore Public Build Files
-/coverage
-/public/up
+# typescript
+*.tsbuildinfo
+next-env.d.ts
