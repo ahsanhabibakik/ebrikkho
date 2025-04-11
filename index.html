@@ -15,14 +15,48 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 
     <style>
+        .hero-gradient {
+            background: linear-gradient(135deg, #1a5d1a 0%, #2d8a2d 100%);
+        }
         .hero-pattern {
             background-image: url('https://images.unsplash.com/photo-1466781783364-36c955e42a7f?ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80');
             background-size: cover;
             background-position: center;
+            opacity: 0.15;
         }
         .product-card:hover {
             transform: translateY(-5px);
             transition: transform 0.3s ease;
+        }
+        .feature-gradient {
+            background: linear-gradient(135deg, #f0fdf4 0%, #dcfce7 100%);
+        }
+        .testimonial-gradient {
+            background: linear-gradient(135deg, #f0fdf4 0%, #dcfce7 100%);
+        }
+        .cta-gradient {
+            background: linear-gradient(135deg, #1a5d1a 0%, #2d8a2d 100%);
+        }
+        .floating {
+            animation: float 6s ease-in-out infinite;
+        }
+        @keyframes float {
+            0% { transform: translateY(0px); }
+            50% { transform: translateY(-20px); }
+            100% { transform: translateY(0px); }
+        }
+        .category-card {
+            transition: all 0.3s ease;
+        }
+        .category-card:hover {
+            transform: scale(1.05);
+        }
+        .benefit-icon {
+            transition: all 0.3s ease;
+        }
+        .benefit-icon:hover {
+            transform: scale(1.2);
+            color: #1a5d1a;
         }
     </style>
 </head>
@@ -78,51 +112,147 @@
     </nav>
 
     <!-- Hero Section -->
-    <section id="home" class="hero hero-pattern min-h-[600px] text-white">
-        <div class="hero-overlay bg-black bg-opacity-50"></div>
-        <div class="hero-content text-center">
-            <div class="max-w-3xl">
-                <h1 class="text-5xl font-bold mb-6">Transform Your Space with Nature's Beauty</h1>
-                <p class="text-xl mb-8">Discover premium plants and professional gardening services to create your perfect green sanctuary.</p>
-                <div class="flex justify-center space-x-4">
-                    <a href="#shop" class="btn btn-primary bg-green-600 hover:bg-green-700">Shop Now</a>
-                    <a href="#services" class="btn btn-outline btn-white">Our Services</a>
+    <section id="home" class="hero hero-gradient min-h-[700px] text-white relative overflow-hidden">
+        <div class="hero-pattern absolute inset-0"></div>
+        <div class="container mx-auto px-4 py-20 relative z-10">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+                <div>
+                    <h1 class="text-5xl font-bold mb-6 leading-tight">Transform Your Space with <span class="text-green-300">Nature's Beauty</span></h1>
+                    <p class="text-xl mb-8 text-green-100">Discover premium plants and professional gardening services to create your perfect green sanctuary.</p>
+                    <div class="flex flex-col sm:flex-row gap-4">
+                        <a href="#shop" class="btn btn-lg bg-white text-green-800 hover:bg-green-100 border-0">Shop Now</a>
+                        <a href="#services" class="btn btn-lg btn-outline btn-white">Our Services</a>
+                    </div>
+                    <div class="mt-8 flex items-center gap-6">
+                        <div class="flex -space-x-2">
+                            <img src="https://i.pravatar.cc/150?img=1" alt="Customer" class="w-10 h-10 rounded-full border-2 border-white">
+                            <img src="https://i.pravatar.cc/150?img=2" alt="Customer" class="w-10 h-10 rounded-full border-2 border-white">
+                            <img src="https://i.pravatar.cc/150?img=3" alt="Customer" class="w-10 h-10 rounded-full border-2 border-white">
+                        </div>
+                        <div>
+                            <div class="flex items-center">
+                                <div class="rating rating-sm">
+                                    <input type="radio" class="mask mask-star-2 bg-orange-400" checked />
+                                    <input type="radio" class="mask mask-star-2 bg-orange-400" checked />
+                                    <input type="radio" class="mask mask-star-2 bg-orange-400" checked />
+                                    <input type="radio" class="mask mask-star-2 bg-orange-400" checked />
+                                    <input type="radio" class="mask mask-star-2 bg-orange-400" checked />
+                                </div>
+                                <span class="ml-2">4.9/5 from 500+ reviews</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="hidden lg:block">
+                    <img src="https://images.unsplash.com/photo-1466692476868-aef1dfb1e735?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" alt="Beautiful Plant" class="rounded-lg shadow-2xl floating">
+                </div>
+            </div>
+        </div>
+        <div class="absolute bottom-0 left-0 right-0 h-16 bg-gradient-to-t from-gray-50 to-transparent"></div>
+    </section>
+
+    <!-- Benefits Section -->
+    <section class="py-16 bg-white">
+        <div class="container mx-auto px-4">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                <div class="flex flex-col items-center text-center p-6">
+                    <div class="w-16 h-16 rounded-full bg-green-100 flex items-center justify-center mb-4">
+                        <i class="fas fa-truck text-2xl text-green-600 benefit-icon"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-2">Free Shipping</h3>
+                    <p class="text-gray-600">On orders over $50</p>
+                </div>
+                <div class="flex flex-col items-center text-center p-6">
+                    <div class="w-16 h-16 rounded-full bg-green-100 flex items-center justify-center mb-4">
+                        <i class="fas fa-undo text-2xl text-green-600 benefit-icon"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-2">Easy Returns</h3>
+                    <p class="text-gray-600">30-day return policy</p>
+                </div>
+                <div class="flex flex-col items-center text-center p-6">
+                    <div class="w-16 h-16 rounded-full bg-green-100 flex items-center justify-center mb-4">
+                        <i class="fas fa-leaf text-2xl text-green-600 benefit-icon"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-2">Fresh Plants</h3>
+                    <p class="text-gray-600">Handpicked for quality</p>
+                </div>
+                <div class="flex flex-col items-center text-center p-6">
+                    <div class="w-16 h-16 rounded-full bg-green-100 flex items-center justify-center mb-4">
+                        <i class="fas fa-headset text-2xl text-green-600 benefit-icon"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-2">24/7 Support</h3>
+                    <p class="text-gray-600">Always here to help</p>
                 </div>
             </div>
         </div>
     </section>
 
     <!-- Featured Categories -->
-    <section class="py-16 bg-white">
+    <section class="py-16 feature-gradient">
         <div class="container mx-auto px-4">
-            <h2 class="text-3xl font-bold text-center mb-12">Shop by Category</h2>
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-bold mb-4">Shop by Category</h2>
+                <p class="text-gray-600 max-w-2xl mx-auto">Explore our wide range of plants and gardening supplies to find exactly what you need for your space.</p>
+            </div>
             <div class="grid grid-cols-1 md:grid-cols-4 gap-6">
-                <div class="card bg-base-100 shadow-xl">
-                    <figure><img src="https://images.unsplash.com/photo-1466692476868-aef1dfb1e735?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60" alt="Indoor Plants" /></figure>
+                <div class="card bg-white shadow-xl category-card">
+                    <figure class="relative overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1466692476868-aef1dfb1e735?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60" alt="Indoor Plants" class="h-48 w-full object-cover" />
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent"></div>
+                        <div class="absolute bottom-0 left-0 p-4">
+                            <h3 class="text-white text-xl font-bold">Indoor Plants</h3>
+                        </div>
+                    </figure>
                     <div class="card-body">
-                        <h3 class="card-title">Indoor Plants</h3>
-                        <p>Transform your indoor space</p>
+                        <p>Transform your indoor space with our selection of beautiful indoor plants.</p>
+                        <div class="card-actions justify-end">
+                            <a href="#" class="btn btn-sm btn-outline btn-green-600">View All</a>
+                        </div>
                     </div>
                 </div>
-                <div class="card bg-base-100 shadow-xl">
-                    <figure><img src="https://images.unsplash.com/photo-1416879595882-3373a0480b5b?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60" alt="Outdoor Plants" /></figure>
+                <div class="card bg-white shadow-xl category-card">
+                    <figure class="relative overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1416879595882-3373a0480b5b?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60" alt="Outdoor Plants" class="h-48 w-full object-cover" />
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent"></div>
+                        <div class="absolute bottom-0 left-0 p-4">
+                            <h3 class="text-white text-xl font-bold">Outdoor Plants</h3>
+                        </div>
+                    </figure>
                     <div class="card-body">
-                        <h3 class="card-title">Outdoor Plants</h3>
-                        <p>Enhance your garden</p>
+                        <p>Enhance your garden with our selection of outdoor plants and flowers.</p>
+                        <div class="card-actions justify-end">
+                            <a href="#" class="btn btn-sm btn-outline btn-green-600">View All</a>
+                        </div>
                     </div>
                 </div>
-                <div class="card bg-base-100 shadow-xl">
-                    <figure><img src="https://images.unsplash.com/photo-1466781783364-36c955e42a7f?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60" alt="Garden Tools" /></figure>
+                <div class="card bg-white shadow-xl category-card">
+                    <figure class="relative overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1466781783364-36c955e42a7f?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60" alt="Garden Tools" class="h-48 w-full object-cover" />
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent"></div>
+                        <div class="absolute bottom-0 left-0 p-4">
+                            <h3 class="text-white text-xl font-bold">Garden Tools</h3>
+                        </div>
+                    </figure>
                     <div class="card-body">
-                        <h3 class="card-title">Garden Tools</h3>
-                        <p>Professional equipment</p>
+                        <p>Professional equipment to help you maintain your garden with ease.</p>
+                        <div class="card-actions justify-end">
+                            <a href="#" class="btn btn-sm btn-outline btn-green-600">View All</a>
+                        </div>
                     </div>
                 </div>
-                <div class="card bg-base-100 shadow-xl">
-                    <figure><img src="https://images.unsplash.com/photo-1468657988500-aca2be9f6cbb?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60" alt="Accessories" /></figure>
+                <div class="card bg-white shadow-xl category-card">
+                    <figure class="relative overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1468657988500-aca2be9f6cbb?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60" alt="Accessories" class="h-48 w-full object-cover" />
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent"></div>
+                        <div class="absolute bottom-0 left-0 p-4">
+                            <h3 class="text-white text-xl font-bold">Accessories</h3>
+                        </div>
+                    </figure>
                     <div class="card-body">
-                        <h3 class="card-title">Accessories</h3>
-                        <p>Complete your garden</p>
+                        <p>Complete your garden with our selection of pots, planters, and accessories.</p>
+                        <div class="card-actions justify-end">
+                            <a href="#" class="btn btn-sm btn-outline btn-green-600">View All</a>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -130,14 +260,17 @@
     </section>
 
     <!-- Featured Products -->
-    <section id="shop" class="py-16 bg-gray-50">
+    <section id="shop" class="py-16 bg-white">
         <div class="container mx-auto px-4">
-            <h2 class="text-3xl font-bold text-center mb-12">Featured Products</h2>
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-bold mb-4">Featured Products</h2>
+                <p class="text-gray-600 max-w-2xl mx-auto">Discover our most popular plants and gardening supplies, carefully selected for quality and beauty.</p>
+            </div>
             <div class="grid grid-cols-1 md:grid-cols-4 gap-6">
                 <!-- Product Card 1 -->
                 <div class="card bg-white shadow-xl product-card">
                     <figure class="px-4 pt-4">
-                        <img src="https://images.unsplash.com/photo-1509423350716-97f9360b4e09?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60" alt="Monstera" class="rounded-xl" />
+                        <img src="https://images.unsplash.com/photo-1509423350716-97f9360b4e09?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60" alt="Monstera" class="rounded-xl h-64 w-full object-cover" />
                     </figure>
                     <div class="card-body">
                         <h3 class="card-title">Monstera Deliciosa</h3>
@@ -150,7 +283,7 @@
                 <!-- Product Card 2 -->
                 <div class="card bg-white shadow-xl product-card">
                     <figure class="px-4 pt-4">
-                        <img src="https://images.unsplash.com/photo-1593691509543-c55fb32e1ce0?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60" alt="Snake Plant" class="rounded-xl" />
+                        <img src="https://images.unsplash.com/photo-1593691509543-c55fb32e1ce0?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60" alt="Snake Plant" class="rounded-xl h-64 w-full object-cover" />
                     </figure>
                     <div class="card-body">
                         <h3 class="card-title">Snake Plant</h3>
@@ -163,7 +296,7 @@
                 <!-- Product Card 3 -->
                 <div class="card bg-white shadow-xl product-card">
                     <figure class="px-4 pt-4">
-                        <img src="https://images.unsplash.com/photo-1598880940371-1e5b6b3b3b3b?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60" alt="Fiddle Leaf" class="rounded-xl" />
+                        <img src="https://images.unsplash.com/photo-1598880940371-1e5b6b3b3b3b?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60" alt="Fiddle Leaf" class="rounded-xl h-64 w-full object-cover" />
                     </figure>
                     <div class="card-body">
                         <h3 class="card-title">Fiddle Leaf Fig</h3>
@@ -176,7 +309,7 @@
                 <!-- Product Card 4 -->
                 <div class="card bg-white shadow-xl product-card">
                     <figure class="px-4 pt-4">
-                        <img src="https://images.unsplash.com/photo-1598880940371-1e5b6b3b3b3b?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60" alt="Peace Lily" class="rounded-xl" />
+                        <img src="https://images.unsplash.com/photo-1598880940371-1e5b6b3b3b3b?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60" alt="Peace Lily" class="rounded-xl h-64 w-full object-cover" />
                     </figure>
                     <div class="card-body">
                         <h3 class="card-title">Peace Lily</h3>
@@ -187,38 +320,71 @@
                     </div>
                 </div>
             </div>
+            <div class="text-center mt-10">
+                <a href="#" class="btn btn-outline btn-green-600">View All Products</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Special Offer -->
+    <section class="py-16 bg-green-50">
+        <div class="container mx-auto px-4">
+            <div class="card bg-white shadow-xl">
+                <div class="grid grid-cols-1 md:grid-cols-2">
+                    <figure class="md:order-2">
+                        <img src="https://images.unsplash.com/photo-1466692476868-aef1dfb1e735?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" alt="Special Offer" class="h-full w-full object-cover" />
+                    </figure>
+                    <div class="card-body md:order-1 flex flex-col justify-center">
+                        <h2 class="card-title text-3xl font-bold">Special Offer</h2>
+                        <p class="text-xl text-green-600 font-bold">Save 20% on all indoor plants</p>
+                        <p class="py-4">Limited time offer on our selection of beautiful indoor plants. Transform your space with nature's beauty at a fraction of the cost.</p>
+                        <div class="card-actions">
+                            <button class="btn btn-primary bg-green-600 hover:bg-green-700">Shop Now</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
     </section>
 
     <!-- Services Section -->
     <section id="services" class="py-16 bg-white">
         <div class="container mx-auto px-4">
-            <h2 class="text-3xl font-bold text-center mb-12">Our Services</h2>
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-bold mb-4">Our Services</h2>
+                <p class="text-gray-600 max-w-2xl mx-auto">Professional gardening services to help you create and maintain the garden of your dreams.</p>
+            </div>
             <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-                <div class="card bg-base-100 shadow-xl">
+                <div class="card bg-base-100 shadow-xl hover:shadow-2xl transition-shadow">
                     <div class="card-body">
-                        <i class="fas fa-paint-brush text-4xl text-green-600 mb-4"></i>
-                        <h3 class="card-title">Garden Design</h3>
+                        <div class="w-16 h-16 rounded-full bg-green-100 flex items-center justify-center mb-4">
+                            <i class="fas fa-paint-brush text-3xl text-green-600"></i>
+                        </div>
+                        <h3 class="card-title text-xl">Garden Design</h3>
                         <p>Professional landscape design tailored to your space and preferences.</p>
                         <div class="card-actions justify-end">
                             <button class="btn btn-primary bg-green-600 hover:bg-green-700">Learn More</button>
                         </div>
                     </div>
                 </div>
-                <div class="card bg-base-100 shadow-xl">
+                <div class="card bg-base-100 shadow-xl hover:shadow-2xl transition-shadow">
                     <div class="card-body">
-                        <i class="fas fa-leaf text-4xl text-green-600 mb-4"></i>
-                        <h3 class="card-title">Plant Maintenance</h3>
+                        <div class="w-16 h-16 rounded-full bg-green-100 flex items-center justify-center mb-4">
+                            <i class="fas fa-leaf text-3xl text-green-600"></i>
+                        </div>
+                        <h3 class="card-title text-xl">Plant Maintenance</h3>
                         <p>Regular care and maintenance to keep your plants healthy and thriving.</p>
                         <div class="card-actions justify-end">
                             <button class="btn btn-primary bg-green-600 hover:bg-green-700">Learn More</button>
                         </div>
                     </div>
                 </div>
-                <div class="card bg-base-100 shadow-xl">
+                <div class="card bg-base-100 shadow-xl hover:shadow-2xl transition-shadow">
                     <div class="card-body">
-                        <i class="fas fa-seedling text-4xl text-green-600 mb-4"></i>
-                        <h3 class="card-title">Plant Installation</h3>
+                        <div class="w-16 h-16 rounded-full bg-green-100 flex items-center justify-center mb-4">
+                            <i class="fas fa-seedling text-3xl text-green-600"></i>
+                        </div>
+                        <h3 class="card-title text-xl">Plant Installation</h3>
                         <p>Professional installation of plants and garden features.</p>
                         <div class="card-actions justify-end">
                             <button class="btn btn-primary bg-green-600 hover:bg-green-700">Learn More</button>
@@ -229,10 +395,45 @@
         </div>
     </section>
 
-    <!-- Testimonials -->
-    <section class="py-16 bg-gray-50">
+    <!-- How It Works -->
+    <section class="py-16 feature-gradient">
         <div class="container mx-auto px-4">
-            <h2 class="text-3xl font-bold text-center mb-12">What Our Customers Say</h2>
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-bold mb-4">How It Works</h2>
+                <p class="text-gray-600 max-w-2xl mx-auto">Simple steps to transform your space with our plants and services.</p>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                <div class="flex flex-col items-center text-center">
+                    <div class="w-16 h-16 rounded-full bg-green-600 text-white flex items-center justify-center mb-4 text-2xl font-bold">1</div>
+                    <h3 class="text-xl font-bold mb-2">Browse Our Collection</h3>
+                    <p class="text-gray-600">Explore our wide range of plants and gardening supplies.</p>
+                </div>
+                <div class="flex flex-col items-center text-center">
+                    <div class="w-16 h-16 rounded-full bg-green-600 text-white flex items-center justify-center mb-4 text-2xl font-bold">2</div>
+                    <h3 class="text-xl font-bold mb-2">Select Your Items</h3>
+                    <p class="text-gray-600">Choose the plants and products that suit your needs.</p>
+                </div>
+                <div class="flex flex-col items-center text-center">
+                    <div class="w-16 h-16 rounded-full bg-green-600 text-white flex items-center justify-center mb-4 text-2xl font-bold">3</div>
+                    <h3 class="text-xl font-bold mb-2">Place Your Order</h3>
+                    <p class="text-gray-600">Complete your purchase with our secure checkout.</p>
+                </div>
+                <div class="flex flex-col items-center text-center">
+                    <div class="w-16 h-16 rounded-full bg-green-600 text-white flex items-center justify-center mb-4 text-2xl font-bold">4</div>
+                    <h3 class="text-xl font-bold mb-2">Enjoy Your Garden</h3>
+                    <p class="text-gray-600">Receive your plants and transform your space.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials -->
+    <section class="py-16 testimonial-gradient">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-bold mb-4">What Our Customers Say</h2>
+                <p class="text-gray-600 max-w-2xl mx-auto">Hear from our satisfied customers about their experience with Ebrikkho.</p>
+            </div>
             <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
                 <div class="card bg-white shadow-xl">
                     <div class="card-body">
@@ -253,32 +454,90 @@
                                 </div>
                             </div>
                         </div>
-                        <p>"Amazing service! The team transformed my backyard into a beautiful garden paradise."</p>
+                        <p>"Amazing service! The team transformed my backyard into a beautiful garden paradise. The plants are healthy and thriving."</p>
                     </div>
                 </div>
-                <!-- Add more testimonial cards here -->
+                <div class="card bg-white shadow-xl">
+                    <div class="card-body">
+                        <div class="flex items-center mb-4">
+                            <div class="avatar">
+                                <div class="w-16 rounded-full">
+                                    <img src="https://i.pravatar.cc/150?img=2" alt="Customer" />
+                                </div>
+                            </div>
+                            <div class="ml-4">
+                                <h3 class="font-bold">Michael Brown</h3>
+                                <div class="rating rating-sm">
+                                    <input type="radio" class="mask mask-star-2 bg-orange-400" checked />
+                                    <input type="radio" class="mask mask-star-2 bg-orange-400" checked />
+                                    <input type="radio" class="mask mask-star-2 bg-orange-400" checked />
+                                    <input type="radio" class="mask mask-star-2 bg-orange-400" checked />
+                                    <input type="radio" class="mask mask-star-2 bg-orange-400" checked />
+                                </div>
+                            </div>
+                        </div>
+                        <p>"The quality of plants is exceptional. I've ordered several times and have never been disappointed. Highly recommend!"</p>
+                    </div>
+                </div>
+                <div class="card bg-white shadow-xl">
+                    <div class="card-body">
+                        <div class="flex items-center mb-4">
+                            <div class="avatar">
+                                <div class="w-16 rounded-full">
+                                    <img src="https://i.pravatar.cc/150?img=3" alt="Customer" />
+                                </div>
+                            </div>
+                            <div class="ml-4">
+                                <h3 class="font-bold">Emily Davis</h3>
+                                <div class="rating rating-sm">
+                                    <input type="radio" class="mask mask-star-2 bg-orange-400" checked />
+                                    <input type="radio" class="mask mask-star-2 bg-orange-400" checked />
+                                    <input type="radio" class="mask mask-star-2 bg-orange-400" checked />
+                                    <input type="radio" class="mask mask-star-2 bg-orange-400" checked />
+                                    <input type="radio" class="mask mask-star-2 bg-orange-400" checked />
+                                </div>
+                            </div>
+                        </div>
+                        <p>"The customer service is outstanding. They helped me choose the perfect plants for my apartment and provided great care instructions."</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="py-16 cta-gradient text-white">
+        <div class="container mx-auto px-4 text-center">
+            <h2 class="text-3xl font-bold mb-6">Ready to Transform Your Space?</h2>
+            <p class="text-xl mb-8 max-w-2xl mx-auto">Join thousands of satisfied customers who have brought nature's beauty into their homes and gardens.</p>
+            <div class="flex flex-col sm:flex-row justify-center gap-4">
+                <a href="#shop" class="btn btn-lg bg-white text-green-800 hover:bg-green-100 border-0">Shop Now</a>
+                <a href="#contact" class="btn btn-lg btn-outline btn-white">Contact Us</a>
             </div>
         </div>
     </section>
 
     <!-- Newsletter -->
-    <section class="py-16 bg-green-800 text-white">
+    <section class="py-16 bg-white">
         <div class="container mx-auto px-4 text-center">
             <h2 class="text-3xl font-bold mb-6">Subscribe to Our Newsletter</h2>
-            <p class="mb-8">Get the latest updates on new products and upcoming sales</p>
-            <form class="max-w-md mx-auto flex gap-4">
+            <p class="mb-8 max-w-2xl mx-auto">Get the latest updates on new products, special offers, and gardening tips delivered straight to your inbox.</p>
+            <form class="max-w-md mx-auto flex flex-col sm:flex-row gap-4">
                 <input type="email" placeholder="Enter your email" class="input input-bordered w-full" />
-                <button class="btn btn-primary bg-white text-green-800 hover:bg-gray-100">Subscribe</button>
+                <button class="btn btn-primary bg-green-600 hover:bg-green-700 text-white">Subscribe</button>
             </form>
         </div>
     </section>
 
     <!-- Contact Section -->
-    <section id="contact" class="py-16 bg-white">
+    <section id="contact" class="py-16 bg-gray-50">
         <div class="container mx-auto px-4">
-            <h2 class="text-3xl font-bold text-center mb-12">Contact Us</h2>
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-bold mb-4">Contact Us</h2>
+                <p class="text-gray-600 max-w-2xl mx-auto">Have questions or need assistance? We're here to help you with all your gardening needs.</p>
+            </div>
             <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-                <div class="card bg-base-100 shadow-xl">
+                <div class="card bg-white shadow-xl">
                     <div class="card-body">
                         <h3 class="card-title mb-4">Get in Touch</h3>
                         <form>
@@ -295,7 +554,7 @@
                         </form>
                     </div>
                 </div>
-                <div class="card bg-base-100 shadow-xl">
+                <div class="card bg-white shadow-xl">
                     <div class="card-body">
                         <h3 class="card-title mb-4">Contact Information</h3>
                         <div class="space-y-4">
@@ -310,6 +569,20 @@
                             <div class="flex items-center">
                                 <i class="fas fa-envelope text-green-600 w-8"></i>
                                 <p>info@ebrikkho.com</p>
+                            </div>
+                        </div>
+                        <div class="mt-8">
+                            <h3 class="text-xl font-bold mb-4">Follow Us</h3>
+                            <div class="flex space-x-4">
+                                <a href="#" class="w-10 h-10 rounded-full bg-green-100 flex items-center justify-center text-green-600 hover:bg-green-200">
+                                    <i class="fab fa-facebook-f"></i>
+                                </a>
+                                <a href="#" class="w-10 h-10 rounded-full bg-green-100 flex items-center justify-center text-green-600 hover:bg-green-200">
+                                    <i class="fab fa-instagram"></i>
+                                </a>
+                                <a href="#" class="w-10 h-10 rounded-full bg-green-100 flex items-center justify-center text-green-600 hover:bg-green-200">
+                                    <i class="fab fa-twitter"></i>
+                                </a>
                             </div>
                         </div>
                     </div>
