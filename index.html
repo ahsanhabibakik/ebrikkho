@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Homepage</title>
+    
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- DaisyUI CDN for additional components like Navbar -->
+    <script src="https://cdn.jsdelivr.net/npm/daisyui@1.18.2/dist/full.js"></script>
+</head>
+<body class="bg-gray-50 text-gray-800">
+
+    <!-- Navbar Section -->
+    <nav class="navbar bg-base-100 shadow-md">
+        <div class="navbar-start">
+            <a class="btn btn-ghost normal-case text-xl">Ebrikkho</a>
+        </div>
+        <div class="navbar-center hidden lg:flex">
+            <ul class="menu menu-horizontal p-0">
+                <li><a href="#home" class="px-4 py-2">Home</a></li>
+                <li><a href="#about" class="px-4 py-2">About</a></li>
+                <li><a href="#services" class="px-4 py-2">Services</a></li>
+                <li><a href="#contact" class="px-4 py-2">Contact</a></li>
+            </ul>
+        </div>
+        <div class="navbar-end">
+            <a href="tel:+123456789" class="btn btn-primary">Call Us</a>
+        </div>
+    </nav>
+
+    <!-- Hero Section (Home) -->
+    <section id="home" class="hero bg-blue-500 text-white p-10 text-center">
+        <h1 class="text-4xl font-bold">Welcome to Ebrikkho</h1>
+        <p class="text-lg mt-4">We provide premium gardening services with care.</p>
+        <a href="#services" class="btn btn-outline mt-6">Our Services</a>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about py-16 bg-gray-100">
+        <div class="container mx-auto text-center">
+            <h2 class="text-3xl font-semibold">About Us</h2>
+            <p class="mt-4 text-lg">At Ebrikkho, we specialize in bringing nature into your space through quality gardening services.</p>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="services py-16">
+        <div class="container mx-auto text-center">
+            <h2 class="text-3xl font-semibold">Our Services</h2>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mt-6">
+                <div class="card bg-white shadow-md p-6">
+                    <h3 class="text-xl font-bold">Garden Design</h3>
+                    <p class="mt-4">Create a personalized garden design with our experts.</p>
+                </div>
+                <div class="card bg-white shadow-md p-6">
+                    <h3 class="text-xl font-bold">Maintenance</h3>
+                    <p class="mt-4">Keep your garden in top shape all year round.</p>
+                </div>
+                <div class="card bg-white shadow-md p-6">
+                    <h3 class="text-xl font-bold">Planting</h3>
+                    <p class="mt-4">We plant and nurture plants for healthy growth.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact py-16 bg-gray-200">
+        <div class="container mx-auto text-center">
+            <h2 class="text-3xl font-semibold">Contact Us</h2>
+            <p class="mt-4 text-lg">We’re ready to help you bring your garden dreams to life.</p>
+            <form action="#" class="mt-6">
+                <input type="text" placeholder="Your Name" class="input input-bordered w-full max-w-xs mb-4" required>
+                <input type="email" placeholder="Your Email" class="input input-bordered w-full max-w-xs mb-4" required>
+                <textarea placeholder="Your Message" class="textarea textarea-bordered w-full max-w-xs mb-4" required></textarea>
+                <button type="submit" class="btn btn-primary">Send Message</button>
+            </form>
+        </div>
+    </section>
+
+    <!-- Footer Section -->
+    <footer class="footer p-10 bg-gray-800 text-white text-center">
+        <p>&copy; 2025 Ebrikkho | All Rights Reserved</p>
+    </footer>
+
+</body>
+</html>
