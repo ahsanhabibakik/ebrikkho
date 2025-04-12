@@ -1,677 +1,1181 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Ebrikkho - Premium Gardening & Plant Shop</title>
-    <link href="/src/style.css" rel="stylesheet">
+    <link href="/src/style.css" rel="stylesheet" />
     <link rel="icon" type="image/svg+xml" href="/vite.svg" />
     <!-- Font Awesome for icons -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+    />
     <style>
-        .hero-gradient {
-            background: linear-gradient(135deg, #1a5d1a 0%, #2d8a2d 100%);
+      .hero-gradient {
+        background: linear-gradient(135deg, #1a5d1a 0%, #2d8a2d 100%);
+      }
+      .hero-pattern {
+        background-image: url("https://images.unsplash.com/photo-1466692476868-aef1dfb1e735?q=80&w=2070&auto=format&fit=crop");
+        background-size: cover;
+        background-position: center;
+        opacity: 0.15;
+      }
+      .product-card:hover {
+        transform: translateY(-5px);
+        transition: transform 0.3s ease;
+      }
+      .feature-gradient {
+        background: linear-gradient(135deg, #f0fdf4 0%, #dcfce7 100%);
+      }
+      .testimonial-gradient {
+        background: linear-gradient(135deg, #f0fdf4 0%, #dcfce7 100%);
+      }
+      .cta-gradient {
+        background: linear-gradient(135deg, #1a5d1a 0%, #2d8a2d 100%);
+      }
+      .floating {
+        animation: float 6s ease-in-out infinite;
+      }
+      @keyframes float {
+        0% {
+          transform: translateY(0px);
         }
-        .hero-pattern {
-            background-image: url('https://images.unsplash.com/photo-1466781783364-36c955e42a7f?ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80');
-            background-size: cover;
-            background-position: center;
-            opacity: 0.15;
+        50% {
+          transform: translateY(-20px);
         }
-        .product-card:hover {
-            transform: translateY(-5px);
-            transition: transform 0.3s ease;
+        100% {
+          transform: translateY(0px);
         }
-        .feature-gradient {
-            background: linear-gradient(135deg, #f0fdf4 0%, #dcfce7 100%);
-        }
-        .testimonial-gradient {
-            background: linear-gradient(135deg, #f0fdf4 0%, #dcfce7 100%);
-        }
-        .cta-gradient {
-            background: linear-gradient(135deg, #1a5d1a 0%, #2d8a2d 100%);
-        }
-        .floating {
-            animation: float 6s ease-in-out infinite;
-        }
-        @keyframes float {
-            0% { transform: translateY(0px); }
-            50% { transform: translateY(-20px); }
-            100% { transform: translateY(0px); }
-        }
-        .category-card {
-            transition: all 0.3s ease;
-        }
-        .category-card:hover {
-            transform: scale(1.05);
-        }
-        .benefit-icon {
-            transition: all 0.3s ease;
-        }
-        .benefit-icon:hover {
-            transform: scale(1.2);
-            color: #1a5d1a;
-        }
+      }
+      .category-card {
+        transition: all 0.3s ease;
+      }
+      .category-card:hover {
+        transform: scale(1.05);
+      }
+      .benefit-icon {
+        transition: all 0.3s ease;
+      }
+      .benefit-icon:hover {
+        transform: scale(1.2);
+        color: #1a5d1a;
+      }
     </style>
-</head>
-<body class="bg-gray-50 text-gray-800">
+  </head>
+  <body class="bg-gray-50 text-gray-800">
     <!-- Top Bar -->
-    <div class="bg-[#1a5d1a] text-white py-2">
-        <div class="container mx-auto px-4 flex justify-between items-center">
-            <div class="flex items-center space-x-4">
-                <span class="text-sm"><i class="fas fa-phone"></i> +880 1518926700</span>
-                <span class="text-sm"><i class="fas fa-envelope"></i> ebrikkho@outlook.com</span>
-            </div>
-            <div class="flex items-center space-x-4">
-                <a href="https://www.facebook.com/profile.php?id=61567919678743" class="hover:text-green-200 transition-colors"><i class="fab fa-facebook"></i></a>
-                <a href="https://www.instagram.com/ebrikkho" class="hover:text-green-200 transition-colors"><i class="fab fa-instagram"></i></a>
-                <a href="https://x.com/ebrikkho" class="hover:text-green-200 transition-colors"><i class="fab fa-twitter"></i></a>
-            </div>
+    <div class="bg-[#e6e92c] text-black py-2">
+      <div class="container mx-auto px-4 flex justify-between items-center">
+        <div class="flex items-center space-x-4">
+          <span class="text-sm"
+            ><i class="fas fa-phone"></i> +880 1518926700</span
+          >
+          <span class="text-sm"
+            ><i class="fas fa-envelope"></i> ebrikkho@outlook.com</span
+          >
         </div>
+        <div class="flex items-center space-x-4">
+          <a
+            href="https://www.facebook.com/profile.php?id=61567919678743"
+            class="hover:text-green-200 transition-colors"
+            ><i class="fab fa-facebook"></i
+          ></a>
+          <a
+            href="https://www.instagram.com/ebrikkho"
+            class="hover:text-green-200 transition-colors"
+            ><i class="fab fa-instagram"></i
+          ></a>
+          <a
+            href="https://x.com/ebrikkho"
+            class="hover:text-green-200 transition-colors"
+            ><i class="fab fa-twitter"></i
+          ></a>
+        </div>
+      </div>
     </div>
 
     <!-- Special Offer Banner -->
     <div class="bg-[#2d8a2d] text-white py-3">
-        <div class="container mx-auto px-4">
-            <div class="flex flex-col sm:flex-row items-center justify-center gap-2 sm:gap-4">
-                <p class="text-sm md:text-base text-center sm:text-left">🎉 <span class="font-bold">FLASH SALE:</span> Get 15% off on all indoor plants! Use code: <span class="font-bold bg-white text-[#2d8a2d] px-2 py-0.5 rounded">GREEN15</span></p>
-                <div class="flex items-center gap-1 sm:gap-2 bg-white/10 backdrop-blur-sm px-3 py-1.5 rounded-lg">
-                    <span class="text-xs sm:text-sm font-medium">Ends in:</span>
-                    <div class="countdown font-mono text-sm sm:text-base flex items-center gap-1">
-                        <span class="bg-white/20 px-2 py-0.5 rounded" style="--value:7;" aria-live="polite" aria-label="7">7</span>d
-                        <span class="bg-white/20 px-2 py-0.5 rounded" style="--value:23;" aria-live="polite" aria-label="23">23</span>h
-                        <span class="bg-white/20 px-2 py-0.5 rounded" style="--value:59;" aria-live="polite" aria-label="59">59</span>m
-                        <span class="bg-white/20 px-2 py-0.5 rounded" style="--value:59;" aria-live="polite" aria-label="59">59</span>s
-                    </div>
-                </div>
+      <div class="container mx-auto px-4">
+        <div
+          class="flex flex-col sm:flex-row items-center justify-center gap-2 sm:gap-4"
+        >
+          <p class="text-sm md:text-base text-center sm:text-left">
+            🎉 <span class="font-bold">FLASH SALE:</span> Get 15% off on all
+            indoor plants! Use code:
+            <span class="font-bold bg-white text-[#2d8a2d] px-2 py-0.5 rounded"
+              >GREEN15</span
+            >
+          </p>
+          <div
+            class="flex items-center gap-1 sm:gap-2 bg-white/10 backdrop-blur-sm px-3 py-1.5 rounded-lg"
+          >
+            <span class="text-xs sm:text-sm font-medium">Ends in:</span>
+            <div
+              class="countdown font-mono text-sm sm:text-base flex items-center gap-1"
+            >
+              <span
+                class="bg-white/20 px-2 py-0.5 rounded"
+                style="--value: 7"
+                aria-live="polite"
+                aria-label="7"
+                >7</span
+              >d
+              <span
+                class="bg-white/20 px-2 py-0.5 rounded"
+                style="--value: 23"
+                aria-live="polite"
+                aria-label="23"
+                >23</span
+              >h
+              <span
+                class="bg-white/20 px-2 py-0.5 rounded"
+                style="--value: 59"
+                aria-live="polite"
+                aria-label="59"
+                >59</span
+              >m
+              <span
+                class="bg-white/20 px-2 py-0.5 rounded"
+                style="--value: 59"
+                aria-live="polite"
+                aria-label="59"
+                >59</span
+              >s
             </div>
+          </div>
         </div>
+      </div>
     </div>
 
     <!-- Navbar Section -->
-    <div class="navbar bg-[#1a5d1a] shadow-sm">
-        <div class="navbar-start">
-            <div class="dropdown md:hidden">
-                <div tabindex="0" role="button" class="btn btn-ghost btn-circle text-white">
-                    <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h7" />
-                    </svg>
-                </div>
-                <ul tabindex="0" class="menu menu-sm dropdown-content bg-white text-black rounded-box z-10 mt-3 w-52 p-2 shadow">
-                    <li><a>Homepage</a></li>
-                    <li><a>Portfolio</a></li>
-                    <li><a>About</a></li>
-                </ul>
-            </div>
-            <div class="hidden md:flex space-x-6">
-                <a href="#" class="text-white hover:text-green-200 transition-colors">Home</a>
-                <a href="#" class="text-white hover:text-green-200 transition-colors">Shop</a>
-                <a href="#" class="text-white hover:text-green-200 transition-colors">Services</a>
-                <a href="#" class="text-white hover:text-green-200 transition-colors">About</a>
-                <a href="#" class="text-white hover:text-green-200 transition-colors">Contact</a>
-            </div>
+    <div class="navbar bg-[#ec9a2e] shadow-sm">
+      <div class="navbar-start">
+        <div class="dropdown md:hidden">
+          <div
+            tabindex="0"
+            role="button"
+            class="btn btn-ghost btn-circle text-white"
+          >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              class="h-5 w-5"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke="currentColor"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M4 6h16M4 12h16M4 18h7"
+              />
+            </svg>
+          </div>
+          <ul
+            tabindex="0"
+            class="menu menu-sm dropdown-content bg-white text-black rounded-box z-10 mt-3 w-52 p-2 shadow"
+          >
+            <li><a>Homepage</a></li>
+            <li><a>Portfolio</a></li>
+            <li><a>About</a></li>
+          </ul>
         </div>
-        <div class="navbar-center">
-            <a href="/" class="normal-case">
-                <img src="/ebrikkho-logo.png" alt="Ebrikkho Logo" class="h-20 w-auto" />
-            </a>
+        <div class="hidden md:flex space-x-6">
+          <a href="#" class="text-white hover:text-green-200 transition-colors"
+            >Home</a
+          >
+          <a href="#" class="text-white hover:text-green-200 transition-colors"
+            >Shop</a
+          >
+          <a href="#" class="text-white hover:text-green-200 transition-colors"
+            >Services</a
+          >
+          <a href="#" class="text-white hover:text-green-200 transition-colors"
+            >About</a
+          >
+          <a href="#" class="text-white hover:text-green-200 transition-colors"
+            >Contact</a
+          >
         </div>
-        <div class="navbar-end">
-            <button class="btn btn-ghost btn-circle text-white hover:text-green-200 transition-colors">
-                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
-                </svg>
-            </button>
-            <button class="btn btn-ghost btn-circle text-white hover:text-green-200 transition-colors">
-                <div class="indicator">
-                    <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 17h5l-1.405-1.405A2.032 2.032 0 0118 14.158V11a6.002 6.002 0 00-4-5.659V5a2 2 0 10-4 0v.341C7.67 6.165 6 8.388 6 11v3.159c0 .538-.214 1.055-.595 1.436L4 17h5m6 0v1a3 3 0 11-6 0v-1m6 0H9" />
-                    </svg>
-                    <span class="badge badge-xs badge-primary indicator-item"></span>
-                </div>
-            </button>
-        </div>
+      </div>
+      <div class="navbar-center">
+        <a href="/" class="normal-case">
+          <img
+            src="/ebrikkho-logo.png"
+            alt="Ebrikkho Logo"
+            class="h-20 w-auto"
+          />
+        </a>
+      </div>
+      <div class="navbar-end">
+        <button
+          class="btn btn-ghost btn-circle text-white hover:text-green-200 transition-colors"
+        >
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            class="h-5 w-5"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke="currentColor"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"
+            />
+          </svg>
+        </button>
+        <button
+          class="btn btn-ghost btn-circle text-white hover:text-green-200 transition-colors"
+        >
+          <div class="indicator">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              class="h-5 w-5"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke="currentColor"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M15 17h5l-1.405-1.405A2.032 2.032 0 0118 14.158V11a6.002 6.002 0 00-4-5.659V5a2 2 0 10-4 0v.341C7.67 6.165 6 8.388 6 11v3.159c0 .538-.214 1.055-.595 1.436L4 17h5m6 0v1a3 3 0 11-6 0v-1m6 0H9"
+              />
+            </svg>
+            <span class="badge badge-xs badge-primary indicator-item"></span>
+          </div>
+        </button>
+      </div>
     </div>
 
     <!-- Hero Section -->
-    <section id="home" class="hero hero-gradient min-h-[400px] sm:min-h-[500px] md:min-h-[700px] text-white relative overflow-hidden">
-        <div class="hero-pattern absolute inset-0"></div>
-        <div class="container mx-auto px-4 py-8 sm:py-12 md:py-20 relative z-10">
-            <div class="grid grid-cols-1 lg:grid-cols-2 gap-6 sm:gap-8 md:gap-12 items-center">
-                <div class="order-2 lg:order-1">
-                    <h1 class="text-2xl sm:text-3xl md:text-5xl font-bold mb-3 sm:mb-4 md:mb-6 leading-tight">Transform Your Space with <span class="text-green-300">ইবৃক্ষ's Premium Plants</span></h1>
-                    <p class="text-base sm:text-lg md:text-xl mb-4 sm:mb-6 md:mb-8 text-green-100">Discover Bangladesh's finest selection of indoor and outdoor plants, curated by ইবৃক্ষ's expert horticulturists.</p>
-                    <div class="flex flex-col sm:flex-row gap-3 sm:gap-4">
-                        <a href="#shop" class="btn btn-sm sm:btn-md md:btn-lg bg-white text-green-800 hover:bg-green-100 border-0">Shop Now</a>
-                        <a href="#services" class="btn btn-sm sm:btn-md md:btn-lg btn-outline btn-white">Our Services</a>
-                    </div>
-                    <div class="mt-6 md:mt-8 flex items-center gap-4 md:gap-6">
-                        <div class="flex -space-x-2">
-                            <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-1.2.1&auto=format&fit=crop&w=100&q=80" alt="Customer" class="w-8 h-8 md:w-10 md:h-10 rounded-full border-2 border-white">
-                            <img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?ixlib=rb-1.2.1&auto=format&fit=crop&w=100&q=80" alt="Customer" class="w-8 h-8 md:w-10 md:h-10 rounded-full border-2 border-white">
-                            <img src="https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?ixlib=rb-1.2.1&auto=format&fit=crop&w=100&q=80" alt="Customer" class="w-8 h-8 md:w-10 md:h-10 rounded-full border-2 border-white">
-                        </div>
-                        <div>
-                            <div class="flex items-center">
-                                <div class="rating rating-sm">
-                                    <input type="radio" class="mask mask-star-2 bg-orange-400" checked />
-                                    <input type="radio" class="mask mask-star-2 bg-orange-400" checked />
-                                    <input type="radio" class="mask mask-star-2 bg-orange-400" checked />
-                                    <input type="radio" class="mask mask-star-2 bg-orange-400" checked />
-                                    <input type="radio" class="mask mask-star-2 bg-orange-400" checked />
-                                </div>
-                                <span class="ml-2 text-sm md:text-base">4.9/5 from 500+ reviews</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="order-1 lg:order-2 relative">
-                    <div class="absolute inset-0 bg-green-500/20 blur-3xl rounded-full transform -translate-x-1/2 -translate-y-1/2 left-1/2 top-1/2 w-[200%] h-[200%]"></div>
-                    <img src="https://images.unsplash.com/photo-1512428813834-c702c7702b78?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" 
-                         alt="Beautiful Plant" 
-                         class="rounded-lg shadow-2xl floating w-full h-auto max-w-[200px] sm:max-w-[300px] md:max-w-md mx-auto relative z-10"
-                         style="aspect-ratio: 1/1; object-fit: cover;">
-                </div>
+    <section
+      id="home"
+      class="hero hero-gradient min-h-[400px] sm:min-h-[500px] md:min-h-[700px] text-white relative overflow-hidden"
+    >
+      <div class="hero-pattern absolute inset-0"></div>
+      <div class="container mx-auto px-4 py-8 sm:py-12 md:py-20 relative z-10">
+        <div
+          class="grid grid-cols-1 lg:grid-cols-2 gap-6 sm:gap-8 md:gap-12 items-center"
+        >
+          <div class="order-2 lg:order-1">
+            <h1
+              class="text-2xl sm:text-3xl md:text-5xl font-bold mb-3 sm:mb-4 md:mb-6 leading-tight"
+            >
+              Transform Your Space with
+              <span class="text-green-300">ebrikkho's Premium Plants</span>
+            </h1>
+            <p
+              class="text-base sm:text-lg md:text-xl mb-4 sm:mb-6 md:mb-8 text-green-100"
+            >
+              Discover Bangladesh's finest selection of indoor and outdoor
+              plants, curated by ebrikkho's expert horticulturists.
+            </p>
+            <div class="flex flex-col sm:flex-row gap-3 sm:gap-4">
+              <a
+                href="#shop"
+                class="btn btn-sm sm:btn-md md:btn-lg bg-white text-green-800 hover:bg-green-100 border-0"
+                >Shop Now</a
+              >
+              <a
+                href="#services"
+                class="btn btn-sm sm:btn-md md:btn-lg btn-outline btn-white"
+                >Our Services</a
+              >
             </div>
+            <div class="mt-6 md:mt-8 flex items-center gap-4 md:gap-6">
+              <div class="flex -space-x-2">
+                <img
+                  src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-1.2.1&auto=format&fit=crop&w=100&q=80"
+                  alt="Customer"
+                  class="w-8 h-8 md:w-10 md:h-10 rounded-full border-2 border-white"
+                />
+                <img
+                  src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?ixlib=rb-1.2.1&auto=format&fit=crop&w=100&q=80"
+                  alt="Customer"
+                  class="w-8 h-8 md:w-10 md:h-10 rounded-full border-2 border-white"
+                />
+                <img
+                  src="https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?ixlib=rb-1.2.1&auto=format&fit=crop&w=100&q=80"
+                  alt="Customer"
+                  class="w-8 h-8 md:w-10 md:h-10 rounded-full border-2 border-white"
+                />
+              </div>
+              <div>
+                <div class="flex items-center">
+                  <div class="rating rating-sm">
+                    <input
+                      type="radio"
+                      class="mask mask-star-2 bg-orange-400"
+                      checked
+                    />
+                    <input
+                      type="radio"
+                      class="mask mask-star-2 bg-orange-400"
+                      checked
+                    />
+                    <input
+                      type="radio"
+                      class="mask mask-star-2 bg-orange-400"
+                      checked
+                    />
+                    <input
+                      type="radio"
+                      class="mask mask-star-2 bg-orange-400"
+                      checked
+                    />
+                    <input
+                      type="radio"
+                      class="mask mask-star-2 bg-orange-400"
+                      checked
+                    />
+                  </div>
+                  <span class="ml-2 text-sm md:text-base"
+                    >4.9/5 from 500+ reviews</span
+                  >
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="order-1 lg:order-2 relative">
+            <div
+              class="absolute inset-0 bg-green-500/20 blur-3xl rounded-full transform -translate-x-1/2 -translate-y-1/2 left-1/2 top-1/2 w-[200%] h-[200%]"
+            ></div>
+            <img
+              src="https://images.unsplash.com/photo-1512428813834-c702c7702b78?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80"
+              alt="Beautiful Plant"
+              class="rounded-lg shadow-2xl floating w-full h-auto max-w-[200px] sm:max-w-[300px] md:max-w-md mx-auto relative z-10"
+              style="aspect-ratio: 1/1; object-fit: cover"
+            />
+          </div>
         </div>
-        <div class="absolute bottom-0 left-0 right-0 h-16 bg-gradient-to-t from-gray-50 to-transparent"></div>
+      </div>
+      <div
+        class="absolute bottom-0 left-0 right-0 h-16 bg-gradient-to-t from-gray-50 to-transparent"
+      ></div>
     </section>
 
     <!-- Benefits Section -->
     <section class="py-16 bg-white">
-        <div class="container mx-auto px-4">
-            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
-                <div class="flex flex-col items-center text-center p-6">
-                    <div class="w-16 h-16 rounded-full bg-green-100 flex items-center justify-center mb-4">
-                        <i class="fas fa-truck text-2xl text-green-600 benefit-icon"></i>
-                    </div>
-                    <h3 class="text-xl font-bold mb-2">Free Delivery</h3>
-                    <p class="text-gray-600">Across Dhaka for orders over ৳2000</p>
-                </div>
-                <div class="flex flex-col items-center text-center p-6">
-                    <div class="w-16 h-16 rounded-full bg-green-100 flex items-center justify-center mb-4">
-                        <i class="fas fa-undo text-2xl text-green-600 benefit-icon"></i>
-                    </div>
-                    <h3 class="text-xl font-bold mb-2">Easy Returns</h3>
-                    <p class="text-gray-600">7-day plant health guarantee</p>
-                </div>
-                <div class="flex flex-col items-center text-center p-6">
-                    <div class="w-16 h-16 rounded-full bg-green-100 flex items-center justify-center mb-4">
-                        <i class="fas fa-leaf text-2xl text-green-600 benefit-icon"></i>
-                    </div>
-                    <h3 class="text-xl font-bold mb-2">Fresh Plants</h3>
-                    <p class="text-gray-600">Locally grown in our nurseries</p>
-                </div>
-                <div class="flex flex-col items-center text-center p-6">
-                    <div class="w-16 h-16 rounded-full bg-green-100 flex items-center justify-center mb-4">
-                        <i class="fas fa-headset text-2xl text-green-600 benefit-icon"></i>
-                    </div>
-                    <h3 class="text-xl font-bold mb-2">Expert Support</h3>
-                    <p class="text-gray-600">Bangla & English support</p>
-                </div>
+      <div class="container mx-auto px-4">
+        <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+          <div class="flex flex-col items-center text-center p-6">
+            <div
+              class="w-16 h-16 rounded-full bg-green-100 flex items-center justify-center mb-4"
+            >
+              <i class="fas fa-truck text-2xl text-green-600 benefit-icon"></i>
             </div>
+            <h3 class="text-xl font-bold mb-2">Free Delivery</h3>
+            <p class="text-gray-600">Across Dhaka for orders over ৳2000</p>
+          </div>
+          <div class="flex flex-col items-center text-center p-6">
+            <div
+              class="w-16 h-16 rounded-full bg-green-100 flex items-center justify-center mb-4"
+            >
+              <i class="fas fa-undo text-2xl text-green-600 benefit-icon"></i>
+            </div>
+            <h3 class="text-xl font-bold mb-2">Easy Returns</h3>
+            <p class="text-gray-600">7-day plant health guarantee</p>
+          </div>
+          <div class="flex flex-col items-center text-center p-6">
+            <div
+              class="w-16 h-16 rounded-full bg-green-100 flex items-center justify-center mb-4"
+            >
+              <i class="fas fa-leaf text-2xl text-green-600 benefit-icon"></i>
+            </div>
+            <h3 class="text-xl font-bold mb-2">Fresh Plants</h3>
+            <p class="text-gray-600">Locally grown in our nurseries</p>
+          </div>
+          <div class="flex flex-col items-center text-center p-6">
+            <div
+              class="w-16 h-16 rounded-full bg-green-100 flex items-center justify-center mb-4"
+            >
+              <i
+                class="fas fa-headset text-2xl text-green-600 benefit-icon"
+              ></i>
+            </div>
+            <h3 class="text-xl font-bold mb-2">Expert Support</h3>
+            <p class="text-gray-600">Bangla & English support</p>
+          </div>
         </div>
+      </div>
     </section>
 
     <!-- Featured Categories -->
     <section class="py-16 feature-gradient">
-        <div class="container mx-auto px-4">
-            <div class="text-center mb-12">
-                <h2 class="text-3xl font-bold mb-4">Shop by Category</h2>
-                <p class="text-gray-600 max-w-2xl mx-auto">Explore our collection of plants perfect for Bangladesh's climate and your home.</p>
-            </div>
-            <div class="grid grid-cols-1 md:grid-cols-4 gap-6">
-                <div class="card bg-white shadow-xl category-card">
-                    <figure class="relative overflow-hidden">
-                        <img src="https://images.unsplash.com/photo-1485955900006-10f4d324d411?ixlib=rb-1.2.1&auto=format&fit=crop&w=1000&q=80" alt="Indoor Plants" class="h-48 w-full object-cover" />
-                        <div class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent"></div>
-                    </figure>
-                    <div class="card-body">
-                        <h3 class="card-title text-green-800 text-xl 
-                        font-bold">Indoor Plants</h3>
-                        <p>Perfect for apartments and offices in Dhaka</p>
-                        <div class="card-actions justify-end">
-                            <a href="#" class="btn btn-sm btn-outline btn-green-600 px-4 py-1">View All</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="card bg-white shadow-xl category-card">
-                    <figure class="relative overflow-hidden">
-                        <img src="https://images.unsplash.com/photo-1512428813834-c702c7702b78?ixlib=rb-1.2.1&auto=format&fit=crop&w=1000&q=80" alt="Outdoor Plants" class="h-48 w-full object-cover" />
-                        <div class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent"></div>
-                    </figure>
-                    <div class="card-body">
-                        <h3 class="card-title text-green-800 text-xl 
-                        font-bold">Outdoor Plants</h3>
-                        <p>Thriving plants for your balcony and garden</p>
-                        <div class="card-actions justify-end">
-                            <a href="#" class="btn btn-sm btn-outline btn-green-600 px-4 py-1">View All</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="card bg-white shadow-xl category-card">
-                    <figure class="relative overflow-hidden">
-                        <img src="https://images.unsplash.com/photo-1485955900006-10f4d324d411?ixlib=rb-1.2.1&auto=format&fit=crop&w=1000&q=80" alt="Gardening Tools" class="h-48 w-full object-cover" />
-                        <div class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent"></div>
-                    </figure>
-                    <div class="card-body">
-                        <h3 class="card-title text-green-800 text-xl 
-                        font-bold">Gardening Tools</h3>
-                        <p>Essential tools for plant care in Bangladesh</p>
-                        <div class="card-actions justify-end">
-                            <a href="#" class="btn btn-sm btn-outline btn-green-600 px-4 py-1">View All</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="card bg-white shadow-xl category-card">
-                    <figure class="relative overflow-hidden">
-                        <img src="https://images.unsplash.com/photo-1512428813834-c702c7702b78?ixlib=rb-1.2.1&auto=format&fit=crop&w=1000&q=80" alt="Plant Consultation" class="h-48 w-full object-cover" />
-                        <div class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent"></div>
-                    </figure>
-                    <div class="card-body">
-                        <h3 class="card-title text-green-800 text-xl 
-                        font-bold">Plant Consultation</h3>
-                        <p>Expert advice for your specific space and needs</p>
-                        <div class="card-actions justify-end">
-                            <a href="#" class="btn btn-sm btn-outline btn-green-600 px-4 py-1">Book Now</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
+      <div class="container mx-auto px-4">
+        <div class="text-center mb-12">
+          <h2 class="text-3xl font-bold mb-4">Shop by Category</h2>
+          <p class="text-gray-600 max-w-2xl mx-auto">
+            Explore our collection of plants perfect for Bangladesh's climate
+            and your home.
+          </p>
         </div>
+        <div class="grid grid-cols-1 md:grid-cols-4 gap-6">
+          <div class="card bg-white shadow-xl category-card">
+            <figure class="relative overflow-hidden">
+              <img
+                src="https://images.unsplash.com/photo-1485955900006-10f4d324d411?ixlib=rb-1.2.1&auto=format&fit=crop&w=1000&q=80"
+                alt="Indoor Plants"
+                class="h-48 w-full object-cover"
+              />
+              <div
+                class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent"
+              ></div>
+            </figure>
+            <div class="card-body">
+              <h3 class="card-title text-green-800 text-xl font-bold">
+                Indoor Plants
+              </h3>
+              <p>Perfect for apartments and offices in Dhaka</p>
+              <div class="card-actions justify-end">
+                <a
+                  href="#"
+                  class="btn btn-sm btn-outline btn-green-600 px-4 py-1"
+                  >View All</a
+                >
+              </div>
+            </div>
+          </div>
+          <div class="card bg-white shadow-xl category-card">
+            <figure class="relative overflow-hidden">
+              <img
+                src="https://images.unsplash.com/photo-1512428813834-c702c7702b78?ixlib=rb-1.2.1&auto=format&fit=crop&w=1000&q=80"
+                alt="Outdoor Plants"
+                class="h-48 w-full object-cover"
+              />
+              <div
+                class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent"
+              ></div>
+            </figure>
+            <div class="card-body">
+              <h3 class="card-title text-green-800 text-xl font-bold">
+                Outdoor Plants
+              </h3>
+              <p>Thriving plants for your balcony and garden</p>
+              <div class="card-actions justify-end">
+                <a
+                  href="#"
+                  class="btn btn-sm btn-outline btn-green-600 px-4 py-1"
+                  >View All</a
+                >
+              </div>
+            </div>
+          </div>
+          <div class="card bg-white shadow-xl category-card">
+            <figure class="relative overflow-hidden">
+              <img
+                src="https://images.unsplash.com/photo-1485955900006-10f4d324d411?ixlib=rb-1.2.1&auto=format&fit=crop&w=1000&q=80"
+                alt="Gardening Tools"
+                class="h-48 w-full object-cover"
+              />
+              <div
+                class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent"
+              ></div>
+            </figure>
+            <div class="card-body">
+              <h3 class="card-title text-green-800 text-xl font-bold">
+                Gardening Tools
+              </h3>
+              <p>Essential tools for plant care in Bangladesh</p>
+              <div class="card-actions justify-end">
+                <a
+                  href="#"
+                  class="btn btn-sm btn-outline btn-green-600 px-4 py-1"
+                  >View All</a
+                >
+              </div>
+            </div>
+          </div>
+          <div class="card bg-white shadow-xl category-card">
+            <figure class="relative overflow-hidden">
+              <img
+                src="https://images.unsplash.com/photo-1512428813834-c702c7702b78?ixlib=rb-1.2.1&auto=format&fit=crop&w=1000&q=80"
+                alt="Plant Consultation"
+                class="h-48 w-full object-cover"
+              />
+              <div
+                class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent"
+              ></div>
+            </figure>
+            <div class="card-body">
+              <h3 class="card-title text-green-800 text-xl font-bold">
+                Plant Consultation
+              </h3>
+              <p>Expert advice for your specific space and needs</p>
+              <div class="card-actions justify-end">
+                <a
+                  href="#"
+                  class="btn btn-sm btn-outline btn-green-600 px-4 py-1"
+                  >Book Now</a
+                >
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
     </section>
 
     <!-- Featured Products -->
     <section id="shop" class="py-16 bg-white">
-        <div class="container mx-auto px-4">
-            <div class="text-center mb-12">
-                <h2 class="text-3xl font-bold mb-4">Featured Products</h2>
-                <p class="text-gray-600 max-w-2xl mx-auto">Discover our most popular plants and gardening supplies, carefully selected for quality and beauty.</p>
-            </div>
-            <div class="grid grid-cols-1 md:grid-cols-4 gap-6">
-                <!-- Product Card 1 -->
-                <div class="card bg-white shadow-xl product-card">
-                    <figure class="px-4 pt-4">
-                        <img src="https://images.unsplash.com/photo-1512428813834-c702c7702b78?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" alt="Monstera" class="rounded-xl h-64 w-full object-cover" />
-                    </figure>
-                    <div class="card-body">
-                        <h3 class="card-title">Monstera Deliciosa</h3>
-                        <p class="text-green-600 font-bold">৳2,999</p>
-                        <div class="card-actions justify-end">
-                            <button class="btn btn-sm btn-primary bg-green-600 hover:bg-green-700 px-4 py-1">Add to Cart</button>
-                        </div>
-                    </div>
-                </div>
-                <!-- Product Card 2 -->
-                <div class="card bg-white shadow-xl product-card">
-                    <figure class="px-4 pt-4">
-                        <img src="https://images.unsplash.com/photo-1485955900006-10f4d324d411?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" alt="Snake Plant" class="rounded-xl h-64 w-full object-cover" />
-                    </figure>
-                    <div class="card-body">
-                        <h3 class="card-title">Snake Plant</h3>
-                        <p class="text-green-600 font-bold">৳1,999</p>
-                        <div class="card-actions justify-end">
-                            <button class="btn btn-sm btn-primary bg-green-600 hover:bg-green-700 px-4 py-1">Add to Cart</button>
-                        </div>
-                    </div>
-                </div>
-                <!-- Product Card 3 -->
-                <div class="card bg-white shadow-xl product-card">
-                    <figure class="px-4 pt-4">
-                        <img src="https://images.unsplash.com/photo-1512428813834-c702c7702b78?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" alt="Fiddle Leaf" class="rounded-xl h-64 w-full object-cover" />
-                    </figure>
-                    <div class="card-body">
-                        <h3 class="card-title">Fiddle Leaf Fig</h3>
-                        <p class="text-green-600 font-bold">৳3,499</p>
-                        <div class="card-actions justify-end">
-                            <button class="btn btn-sm btn-primary bg-green-600 hover:bg-green-700 px-4 py-1">Add to Cart</button>
-                        </div>
-                    </div>
-                </div>
-                <!-- Product Card 4 -->
-                <div class="card bg-white shadow-xl product-card">
-                    <figure class="px-4 pt-4">
-                        <img src="https://images.unsplash.com/photo-1485955900006-10f4d324d411?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" alt="Peace Lily" class="rounded-xl h-64 w-full object-cover" />
-                    </figure>
-                    <div class="card-body">
-                        <h3 class="card-title">Peace Lily</h3>
-                        <p class="text-green-600 font-bold">৳1,499</p>
-                        <div class="card-actions justify-end">
-                            <button class="btn btn-sm btn-primary bg-green-600 hover:bg-green-700 px-4 py-1">Add to Cart</button>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="text-center mt-10">
-                <a href="#" class="btn btn-outline btn-green-600">View All Products</a>
-            </div>
+      <div class="container mx-auto px-4">
+        <div class="text-center mb-12">
+          <h2 class="text-3xl font-bold mb-4">Featured Products</h2>
+          <p class="text-gray-600 max-w-2xl mx-auto">
+            Discover our most popular plants and gardening supplies, carefully
+            selected for quality and beauty.
+          </p>
         </div>
+        <div class="grid grid-cols-1 md:grid-cols-4 gap-6">
+          <!-- Product Card 1 -->
+          <div class="card bg-white shadow-xl product-card">
+            <figure class="px-4 pt-4">
+              <img
+                src="https://images.unsplash.com/photo-1512428813834-c702c7702b78?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80"
+                alt="Monstera"
+                class="rounded-xl h-64 w-full object-cover"
+              />
+            </figure>
+            <div class="card-body">
+              <h3 class="card-title">Monstera Deliciosa</h3>
+              <p class="text-green-600 font-bold">৳2,999</p>
+              <div class="card-actions justify-end">
+                <button
+                  class="btn btn-sm btn-primary bg-green-600 hover:bg-green-700 px-4 py-1"
+                >
+                  Add to Cart
+                </button>
+              </div>
+            </div>
+          </div>
+          <!-- Product Card 2 -->
+          <div class="card bg-white shadow-xl product-card">
+            <figure class="px-4 pt-4">
+              <img
+                src="https://images.unsplash.com/photo-1485955900006-10f4d324d411?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80"
+                alt="Snake Plant"
+                class="rounded-xl h-64 w-full object-cover"
+              />
+            </figure>
+            <div class="card-body">
+              <h3 class="card-title">Snake Plant</h3>
+              <p class="text-green-600 font-bold">৳1,999</p>
+              <div class="card-actions justify-end">
+                <button
+                  class="btn btn-sm btn-primary bg-green-600 hover:bg-green-700 px-4 py-1"
+                >
+                  Add to Cart
+                </button>
+              </div>
+            </div>
+          </div>
+          <!-- Product Card 3 -->
+          <div class="card bg-white shadow-xl product-card">
+            <figure class="px-4 pt-4">
+              <img
+                src="https://images.unsplash.com/photo-1512428813834-c702c7702b78?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80"
+                alt="Fiddle Leaf"
+                class="rounded-xl h-64 w-full object-cover"
+              />
+            </figure>
+            <div class="card-body">
+              <h3 class="card-title">Fiddle Leaf Fig</h3>
+              <p class="text-green-600 font-bold">৳3,499</p>
+              <div class="card-actions justify-end">
+                <button
+                  class="btn btn-sm btn-primary bg-green-600 hover:bg-green-700 px-4 py-1"
+                >
+                  Add to Cart
+                </button>
+              </div>
+            </div>
+          </div>
+          <!-- Product Card 4 -->
+          <div class="card bg-white shadow-xl product-card">
+            <figure class="px-4 pt-4">
+              <img
+                src="https://images.unsplash.com/photo-1485955900006-10f4d324d411?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80"
+                alt="Peace Lily"
+                class="rounded-xl h-64 w-full object-cover"
+              />
+            </figure>
+            <div class="card-body">
+              <h3 class="card-title">Peace Lily</h3>
+              <p class="text-green-600 font-bold">৳1,499</p>
+              <div class="card-actions justify-end">
+                <button
+                  class="btn btn-sm btn-primary bg-green-600 hover:bg-green-700 px-4 py-1"
+                >
+                  Add to Cart
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="text-center mt-10">
+          <a href="#" class="btn btn-outline btn-green-600"
+            >View All Products</a
+          >
+        </div>
+      </div>
     </section>
 
     <!-- Special Offer -->
     <section class="py-12 md:py-16 bg-green-50">
-        <div class="container mx-auto px-4">
-            <div class="card bg-white shadow-xl">
-                <div class="grid grid-cols-1 md:grid-cols-2">
-                    <figure class="md:order-2">
-                        <img src="https://images.unsplash.com/photo-1485955900006-10f4d324d411?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" alt="Special Offer" class="w-full h-64 md:h-full object-cover" />
-                    </figure>
-                    <div class="card-body md:order-1 flex flex-col justify-center p-6 md:p-8">
-                        <h2 class="card-title text-2xl md:text-3xl font-bold">Pohela Boishakh Special</h2>
-                        <p class="text-lg md:text-xl text-green-600 font-bold">Save 20% on all indoor plants</p>
-                        <p class="py-4 text-sm md:text-base">Celebrate the Bengali New Year with fresh plants for your home. Limited time offer on our selection of beautiful indoor plants, perfect for your apartment or office in Dhaka.</p>
-                        <div class="card-actions">
-                            <button class="btn btn-sm btn-primary bg-green-600 hover:bg-green-700 px-4 py-1">Shop Now</button>
-                        </div>
-                    </div>
-                </div>
+      <div class="container mx-auto px-4">
+        <div class="card bg-white shadow-xl">
+          <div class="grid grid-cols-1 md:grid-cols-2">
+            <figure class="md:order-2">
+              <img
+                src="https://images.unsplash.com/photo-1485955900006-10f4d324d411?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80"
+                alt="Special Offer"
+                class="w-full h-64 md:h-full object-cover"
+              />
+            </figure>
+            <div
+              class="card-body md:order-1 flex flex-col justify-center p-6 md:p-8"
+            >
+              <h2 class="card-title text-2xl md:text-3xl font-bold">
+                Pohela Boishakh Special
+              </h2>
+              <p class="text-lg md:text-xl text-green-600 font-bold">
+                Save 20% on all indoor plants
+              </p>
+              <p class="py-4 text-sm md:text-base">
+                Celebrate the Bengali New Year with fresh plants for your home.
+                Limited time offer on our selection of beautiful indoor plants,
+                perfect for your apartment or office in Dhaka.
+              </p>
+              <div class="card-actions">
+                <button
+                  class="btn btn-sm btn-primary bg-green-600 hover:bg-green-700 px-4 py-1"
+                >
+                  Shop Now
+                </button>
+              </div>
             </div>
+          </div>
         </div>
+      </div>
     </section>
 
     <!-- Services Section -->
     <section id="services" class="py-16 bg-white">
-        <div class="container mx-auto px-4">
-            <div class="text-center mb-12">
-                <h2 class="text-3xl font-bold mb-4">Our Services</h2>
-                <p class="text-gray-600 max-w-2xl mx-auto">Professional gardening services to help you create and maintain the garden of your dreams.</p>
-            </div>
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-                <div class="card bg-base-100 shadow-xl hover:shadow-2xl transition-shadow">
-                    <div class="card-body">
-                        <div class="w-16 h-16 rounded-full bg-green-100 flex items-center justify-center mb-4">
-                            <i class="fas fa-paint-brush text-3xl text-green-600"></i>
-                        </div>
-                        <h3 class="card-title text-xl">Garden Design</h3>
-                        <p>Professional landscape design tailored to your space and preferences.</p>
-                        <div class="card-actions justify-end">
-                            <button class="btn btn-sm btn-primary bg-green-600 hover:bg-green-700 px-4 py-1">Learn More</button>
-                        </div>
-                    </div>
-                </div>
-                <div class="card bg-base-100 shadow-xl hover:shadow-2xl transition-shadow">
-                    <div class="card-body">
-                        <div class="w-16 h-16 rounded-full bg-green-100 flex items-center justify-center mb-4">
-                            <i class="fas fa-leaf text-3xl text-green-600"></i>
-                        </div>
-                        <h3 class="card-title text-xl">Plant Maintenance</h3>
-                        <p>Regular care and maintenance to keep your plants healthy and thriving.</p>
-                        <div class="card-actions justify-end">
-                            <button class="btn btn-sm btn-primary bg-green-600 hover:bg-green-700 px-4 py-1">Learn More</button>
-                        </div>
-                    </div>
-                </div>
-                <div class="card bg-base-100 shadow-xl hover:shadow-2xl transition-shadow">
-                    <div class="card-body">
-                        <div class="w-16 h-16 rounded-full bg-green-100 flex items-center justify-center mb-4">
-                            <i class="fas fa-seedling text-3xl text-green-600"></i>
-                        </div>
-                        <h3 class="card-title text-xl">Plant Installation</h3>
-                        <p>Professional installation of plants and garden features.</p>
-                        <div class="card-actions justify-end">
-                            <button class="btn btn-sm btn-primary bg-green-600 hover:bg-green-700 px-4 py-1">Learn More</button>
-                        </div>
-                    </div>
-                </div>
-            </div>
+      <div class="container mx-auto px-4">
+        <div class="text-center mb-12">
+          <h2 class="text-3xl font-bold mb-4">Our Services</h2>
+          <p class="text-gray-600 max-w-2xl mx-auto">
+            Professional gardening services to help you create and maintain the
+            garden of your dreams.
+          </p>
         </div>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <div
+            class="card bg-base-100 shadow-xl hover:shadow-2xl transition-shadow"
+          >
+            <div class="card-body">
+              <div
+                class="w-16 h-16 rounded-full bg-green-100 flex items-center justify-center mb-4"
+              >
+                <i class="fas fa-paint-brush text-3xl text-green-600"></i>
+              </div>
+              <h3 class="card-title text-xl">Garden Design</h3>
+              <p>
+                Professional landscape design tailored to your space and
+                preferences.
+              </p>
+              <div class="card-actions justify-end">
+                <button
+                  class="btn btn-sm btn-primary bg-green-600 hover:bg-green-700 px-4 py-1"
+                >
+                  Learn More
+                </button>
+              </div>
+            </div>
+          </div>
+          <div
+            class="card bg-base-100 shadow-xl hover:shadow-2xl transition-shadow"
+          >
+            <div class="card-body">
+              <div
+                class="w-16 h-16 rounded-full bg-green-100 flex items-center justify-center mb-4"
+              >
+                <i class="fas fa-leaf text-3xl text-green-600"></i>
+              </div>
+              <h3 class="card-title text-xl">Plant Maintenance</h3>
+              <p>
+                Regular care and maintenance to keep your plants healthy and
+                thriving.
+              </p>
+              <div class="card-actions justify-end">
+                <button
+                  class="btn btn-sm btn-primary bg-green-600 hover:bg-green-700 px-4 py-1"
+                >
+                  Learn More
+                </button>
+              </div>
+            </div>
+          </div>
+          <div
+            class="card bg-base-100 shadow-xl hover:shadow-2xl transition-shadow"
+          >
+            <div class="card-body">
+              <div
+                class="w-16 h-16 rounded-full bg-green-100 flex items-center justify-center mb-4"
+              >
+                <i class="fas fa-seedling text-3xl text-green-600"></i>
+              </div>
+              <h3 class="card-title text-xl">Plant Installation</h3>
+              <p>Professional installation of plants and garden features.</p>
+              <div class="card-actions justify-end">
+                <button
+                  class="btn btn-sm btn-primary bg-green-600 hover:bg-green-700 px-4 py-1"
+                >
+                  Learn More
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
     </section>
 
     <!-- How It Works -->
     <section class="py-16 bg-gradient-to-b from-green-50 to-white">
-        <div class="container mx-auto px-4">
-            <div class="text-center mb-12">
-                <h2 class="text-3xl font-bold mb-4">How It Works</h2>
-                <p class="text-gray-600 max-w-2xl mx-auto">Simple steps to transform your space with our plants and services</p>
-            </div>
-            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
-                <div class="card bg-white shadow-xl hover:shadow-2xl transition duration-300">
-                    <div class="card-body items-center text-center">
-                        <div class="w-20 h-20 rounded-full bg-green-100 flex items-center justify-center mb-4">
-                            <span class="text-3xl font-bold text-green-600">1</span>
-                        </div>
-                        <h3 class="text-xl font-bold mb-2">Browse Our Collection</h3>
-                        <p class="text-gray-600">Explore our wide range of plants and gardening supplies</p>
-                    </div>
-                </div>
-                <div class="card bg-white shadow-xl hover:shadow-2xl transition duration-300">
-                    <div class="card-body items-center text-center">
-                        <div class="w-20 h-20 rounded-full bg-green-100 flex items-center justify-center mb-4">
-                            <span class="text-3xl font-bold text-green-600">2</span>
-                        </div>
-                        <h3 class="text-xl font-bold mb-2">Select Your Items</h3>
-                        <p class="text-gray-600">Choose the plants and products that suit your needs</p>
-                    </div>
-                </div>
-                <div class="card bg-white shadow-xl hover:shadow-2xl transition duration-300">
-                    <div class="card-body items-center text-center">
-                        <div class="w-20 h-20 rounded-full bg-green-100 flex items-center justify-center mb-4">
-                            <span class="text-3xl font-bold text-green-600">3</span>
-                        </div>
-                        <h3 class="text-xl font-bold mb-2">Place Your Order</h3>
-                        <p class="text-gray-600">Complete your purchase with our secure checkout</p>
-                    </div>
-                </div>
-                <div class="card bg-white shadow-xl hover:shadow-2xl transition duration-300">
-                    <div class="card-body items-center text-center">
-                        <div class="w-20 h-20 rounded-full bg-green-100 flex items-center justify-center mb-4">
-                            <span class="text-3xl font-bold text-green-600">4</span>
-                        </div>
-                        <h3 class="text-xl font-bold mb-2">Enjoy Your Garden</h3>
-                        <p class="text-gray-600">Receive your plants and transform your space</p>
-                    </div>
-                </div>
-            </div>
+      <div class="container mx-auto px-4">
+        <div class="text-center mb-12">
+          <h2 class="text-3xl font-bold mb-4">How It Works</h2>
+          <p class="text-gray-600 max-w-2xl mx-auto">
+            Simple steps to transform your space with our plants and services
+          </p>
         </div>
+        <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+          <div
+            class="card bg-white shadow-xl hover:shadow-2xl transition duration-300"
+          >
+            <div class="card-body items-center text-center">
+              <div
+                class="w-20 h-20 rounded-full bg-green-100 flex items-center justify-center mb-4"
+              >
+                <span class="text-3xl font-bold text-green-600">1</span>
+              </div>
+              <h3 class="text-xl font-bold mb-2">Browse Our Collection</h3>
+              <p class="text-gray-600">
+                Explore our wide range of plants and gardening supplies
+              </p>
+            </div>
+          </div>
+          <div
+            class="card bg-white shadow-xl hover:shadow-2xl transition duration-300"
+          >
+            <div class="card-body items-center text-center">
+              <div
+                class="w-20 h-20 rounded-full bg-green-100 flex items-center justify-center mb-4"
+              >
+                <span class="text-3xl font-bold text-green-600">2</span>
+              </div>
+              <h3 class="text-xl font-bold mb-2">Select Your Items</h3>
+              <p class="text-gray-600">
+                Choose the plants and products that suit your needs
+              </p>
+            </div>
+          </div>
+          <div
+            class="card bg-white shadow-xl hover:shadow-2xl transition duration-300"
+          >
+            <div class="card-body items-center text-center">
+              <div
+                class="w-20 h-20 rounded-full bg-green-100 flex items-center justify-center mb-4"
+              >
+                <span class="text-3xl font-bold text-green-600">3</span>
+              </div>
+              <h3 class="text-xl font-bold mb-2">Place Your Order</h3>
+              <p class="text-gray-600">
+                Complete your purchase with our secure checkout
+              </p>
+            </div>
+          </div>
+          <div
+            class="card bg-white shadow-xl hover:shadow-2xl transition duration-300"
+          >
+            <div class="card-body items-center text-center">
+              <div
+                class="w-20 h-20 rounded-full bg-green-100 flex items-center justify-center mb-4"
+              >
+                <span class="text-3xl font-bold text-green-600">4</span>
+              </div>
+              <h3 class="text-xl font-bold mb-2">Enjoy Your Garden</h3>
+              <p class="text-gray-600">
+                Receive your plants and transform your space
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
     </section>
 
     <!-- Testimonials -->
     <section class="py-16 testimonial-gradient">
-        <div class="container mx-auto px-4">
-            <div class="text-center mb-12">
-                <h2 class="text-3xl font-bold mb-4">আমাদের গ্রাহকদের মতামত</h2>
-                <p class="text-gray-600 max-w-2xl mx-auto">আমাদের গ্রাহকরা কি বলেন ইবৃক্ষ সম্পর্কে</p>
-            </div>
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-                <div class="card bg-white shadow-xl">
-                    <div class="card-body">
-                        <div class="flex items-center mb-4">
-                            <div class="avatar">
-                                <div class="w-16 rounded-full">
-                                    <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-1.2.1&auto=format&fit=crop&w=100&q=80" alt="Customer" />
-                                </div>
-                            </div>
-                            <div class="ml-4">
-                                <h3 class="font-bold">রাফি আহমেদ</h3>
-                                <div class="rating rating-sm">
-                                    <input type="radio" class="mask mask-star-2 bg-orange-400" checked />
-                                    <input type="radio" class="mask mask-star-2 bg-orange-400" checked />
-                                    <input type="radio" class="mask mask-star-2 bg-orange-400" checked />
-                                    <input type="radio" class="mask mask-star-2 bg-orange-400" checked />
-                                    <input type="radio" class="mask mask-star-2 bg-orange-400" checked />
-                                </div>
-                            </div>
-                        </div>
-                        <p>"ইবৃক্ষের পরামর্শদাতারা আমাকে সাহায্য করেছেন আমার অ্যাপার্টমেন্টের জন্য সঠিক গাছ বেছে নিতে। এখন আমার বাড়ি অনেক সুন্দর দেখাচ্ছে!"</p>
-                    </div>
-                </div>
-                <div class="card bg-white shadow-xl">
-                    <div class="card-body">
-                        <div class="flex items-center mb-4">
-                            <div class="avatar">
-                                <div class="w-16 rounded-full">
-                                    <img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?ixlib=rb-1.2.1&auto=format&fit=crop&w=100&q=80" alt="Customer" />
-                                </div>
-                            </div>
-                            <div class="ml-4">
-                                <h3 class="font-bold">আরিফ হাসান</h3>
-                                <div class="rating rating-sm">
-                                    <input type="radio" class="mask mask-star-2 bg-orange-400" checked />
-                                    <input type="radio" class="mask mask-star-2 bg-orange-400" checked />
-                                    <input type="radio" class="mask mask-star-2 bg-orange-400" checked />
-                                    <input type="radio" class="mask mask-star-2 bg-orange-400" checked />
-                                    <input type="radio" class="mask mask-star-2 bg-orange-400" checked />
-                                </div>
-                            </div>
-                        </div>
-                        <p>"মিরপুরের আবহাওয়ায় কোন গাছ ভালো হবে তা নিয়ে আমি চিন্তিত ছিলাম। ইবৃক্ষের বিশেষজ্ঞরা আমাকে সঠিক গাছ বেছে নিতে সাহায্য করেছেন।"</p>
-                    </div>
-                </div>
-                <div class="card bg-white shadow-xl">
-                    <div class="card-body">
-                        <div class="flex items-center mb-4">
-                            <div class="avatar">
-                                <div class="w-16 rounded-full">
-                                    <img src="https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?ixlib=rb-1.2.1&auto=format&fit=crop&w=100&q=80" alt="Customer" />
-                                </div>
-                            </div>
-                            <div class="ml-4">
-                                <h3 class="font-bold">তানভীর ইসলাম</h3>
-                                <div class="rating rating-sm">
-                                    <input type="radio" class="mask mask-star-2 bg-orange-400" checked />
-                                    <input type="radio" class="mask mask-star-2 bg-orange-400" checked />
-                                    <input type="radio" class="mask mask-star-2 bg-orange-400" checked />
-                                    <input type="radio" class="mask mask-star-2 bg-orange-400" checked />
-                                    <input type="radio" class="mask mask-star-2 bg-orange-400" checked />
-                                </div>
-                            </div>
-                        </div>
-                        <p>"আমার অফিসের জন্য গাছ কিনতে গিয়ে আমি বিভ্রান্ত ছিলাম। ইবৃক্ষের পরামর্শদাতারা আমাকে সাহায্য করেছেন এবং এখন আমার অফিস অনেক সুন্দর দেখাচ্ছে।"</p>
-                    </div>
-                </div>
-            </div>
+      <div class="container mx-auto px-4">
+        <div class="text-center mb-12">
+          <h2 class="text-3xl font-bold mb-4">আমাদের গ্রাহকদের মতামত</h2>
+          <p class="text-gray-600 max-w-2xl mx-auto">
+            আমাদের গ্রাহকরা কি বলেন ইবৃক্ষ সম্পর্কে
+          </p>
         </div>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <div class="card bg-white shadow-xl">
+            <div class="card-body">
+              <div class="flex items-center mb-4">
+                <div class="avatar">
+                  <div class="w-16 rounded-full">
+                    <img
+                      src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-1.2.1&auto=format&fit=crop&w=100&q=80"
+                      alt="Customer"
+                    />
+                  </div>
+                </div>
+                <div class="ml-4">
+                  <h3 class="font-bold">রাফি আহমেদ</h3>
+                  <div class="rating rating-sm">
+                    <input
+                      type="radio"
+                      class="mask mask-star-2 bg-orange-400"
+                      checked
+                    />
+                    <input
+                      type="radio"
+                      class="mask mask-star-2 bg-orange-400"
+                      checked
+                    />
+                    <input
+                      type="radio"
+                      class="mask mask-star-2 bg-orange-400"
+                      checked
+                    />
+                    <input
+                      type="radio"
+                      class="mask mask-star-2 bg-orange-400"
+                      checked
+                    />
+                    <input
+                      type="radio"
+                      class="mask mask-star-2 bg-orange-400"
+                      checked
+                    />
+                  </div>
+                </div>
+              </div>
+              <p>
+                "ইবৃক্ষের পরামর্শদাতারা আমাকে সাহায্য করেছেন আমার
+                অ্যাপার্টমেন্টের জন্য সঠিক গাছ বেছে নিতে। এখন আমার বাড়ি অনেক
+                সুন্দর দেখাচ্ছে!"
+              </p>
+            </div>
+          </div>
+          <div class="card bg-white shadow-xl">
+            <div class="card-body">
+              <div class="flex items-center mb-4">
+                <div class="avatar">
+                  <div class="w-16 rounded-full">
+                    <img
+                      src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?ixlib=rb-1.2.1&auto=format&fit=crop&w=100&q=80"
+                      alt="Customer"
+                    />
+                  </div>
+                </div>
+                <div class="ml-4">
+                  <h3 class="font-bold">আরিফ হাসান</h3>
+                  <div class="rating rating-sm">
+                    <input
+                      type="radio"
+                      class="mask mask-star-2 bg-orange-400"
+                      checked
+                    />
+                    <input
+                      type="radio"
+                      class="mask mask-star-2 bg-orange-400"
+                      checked
+                    />
+                    <input
+                      type="radio"
+                      class="mask mask-star-2 bg-orange-400"
+                      checked
+                    />
+                    <input
+                      type="radio"
+                      class="mask mask-star-2 bg-orange-400"
+                      checked
+                    />
+                    <input
+                      type="radio"
+                      class="mask mask-star-2 bg-orange-400"
+                      checked
+                    />
+                  </div>
+                </div>
+              </div>
+              <p>
+                "মিরপুরের আবহাওয়ায় কোন গাছ ভালো হবে তা নিয়ে আমি চিন্তিত
+                ছিলাম। ইবৃক্ষের বিশেষজ্ঞরা আমাকে সঠিক গাছ বেছে নিতে সাহায্য
+                করেছেন।"
+              </p>
+            </div>
+          </div>
+          <div class="card bg-white shadow-xl">
+            <div class="card-body">
+              <div class="flex items-center mb-4">
+                <div class="avatar">
+                  <div class="w-16 rounded-full">
+                    <img
+                      src="https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?ixlib=rb-1.2.1&auto=format&fit=crop&w=100&q=80"
+                      alt="Customer"
+                    />
+                  </div>
+                </div>
+                <div class="ml-4">
+                  <h3 class="font-bold">তানভীর ইসলাম</h3>
+                  <div class="rating rating-sm">
+                    <input
+                      type="radio"
+                      class="mask mask-star-2 bg-orange-400"
+                      checked
+                    />
+                    <input
+                      type="radio"
+                      class="mask mask-star-2 bg-orange-400"
+                      checked
+                    />
+                    <input
+                      type="radio"
+                      class="mask mask-star-2 bg-orange-400"
+                      checked
+                    />
+                    <input
+                      type="radio"
+                      class="mask mask-star-2 bg-orange-400"
+                      checked
+                    />
+                    <input
+                      type="radio"
+                      class="mask mask-star-2 bg-orange-400"
+                      checked
+                    />
+                  </div>
+                </div>
+              </div>
+              <p>
+                "আমার অফিসের জন্য গাছ কিনতে গিয়ে আমি বিভ্রান্ত ছিলাম। ইবৃক্ষের
+                পরামর্শদাতারা আমাকে সাহায্য করেছেন এবং এখন আমার অফিস অনেক সুন্দর
+                দেখাচ্ছে।"
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
     </section>
 
     <!-- CTA Section -->
     <section class="py-16 cta-gradient text-white">
-        <div class="container mx-auto px-4 text-center">
-            <h2 class="text-3xl font-bold mb-6">Ready to Transform Your Space?</h2>
-            <p class="text-xl mb-8 max-w-2xl mx-auto">Join thousands of satisfied customers who have brought nature's beauty into their homes and gardens.</p>
-            <div class="flex flex-col sm:flex-row justify-center gap-4">
-                <a href="#shop" class="btn btn-md bg-white text-green-800 hover:bg-green-100 border-0 px-6 py-2">Shop Now</a>
-                <a href="#contact" class="btn btn-md btn-outline btn-white px-6 py-2">Contact Us</a>
-            </div>
+      <div class="container mx-auto px-4 text-center">
+        <h2 class="text-3xl font-bold mb-6">Ready to Transform Your Space?</h2>
+        <p class="text-xl mb-8 max-w-2xl mx-auto">
+          Join thousands of satisfied customers who have brought nature's beauty
+          into their homes and gardens.
+        </p>
+        <div class="flex flex-col sm:flex-row justify-center gap-4">
+          <a
+            href="#shop"
+            class="btn btn-md bg-white text-green-800 hover:bg-green-100 border-0 px-6 py-2"
+            >Shop Now</a
+          >
+          <a href="#contact" class="btn btn-md btn-outline btn-white px-6 py-2"
+            >Contact Us</a
+          >
         </div>
+      </div>
     </section>
 
     <!-- Newsletter -->
     <section class="py-16 bg-white">
-        <div class="container mx-auto px-4 text-center">
-            <h2 class="text-3xl font-bold mb-6">Subscribe to Our Newsletter</h2>
-            <p class="mb-8 max-w-2xl mx-auto">Get the latest updates on new products, special offers, and gardening tips delivered straight to your inbox.</p>
-            <form class="max-w-md mx-auto flex flex-col sm:flex-row gap-4">
-                <input type="email" placeholder="Enter your email" class="input input-bordered w-full" />
-                <button class="btn btn-md btn-primary bg-green-600 hover:bg-green-700 text-white px-6 py-2">Subscribe</button>
-            </form>
-        </div>
+      <div class="container mx-auto px-4 text-center">
+        <h2 class="text-3xl font-bold mb-6">Subscribe to Our Newsletter</h2>
+        <p class="mb-8 max-w-2xl mx-auto">
+          Get the latest updates on new products, special offers, and gardening
+          tips delivered straight to your inbox.
+        </p>
+        <form class="max-w-md mx-auto flex flex-col sm:flex-row gap-4">
+          <input
+            type="email"
+            placeholder="Enter your email"
+            class="input input-bordered w-full"
+          />
+          <button
+            class="btn btn-md btn-primary bg-green-600 hover:bg-green-700 text-white px-6 py-2"
+          >
+            Subscribe
+          </button>
+        </form>
+      </div>
     </section>
 
     <!-- Contact Section -->
     <section id="contact" class="py-16 bg-gray-50">
-        <div class="container mx-auto px-4">
-            <div class="text-center mb-12">
-                <h2 class="text-3xl font-bold mb-4">Contact Us</h2>
-                <p class="text-gray-600 max-w-2xl mx-auto">Have questions or need assistance? We're here to help you with all your gardening needs.</p>
-            </div>
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-                <div class="card bg-white shadow-xl">
-                    <div class="card-body">
-                        <h3 class="card-title mb-4">Get in Touch</h3>
-                        <form>
-                            <div class="form-control">
-                                <input type="text" placeholder="Your Name" class="input input-bordered mb-4" required />
-                            </div>
-                            <div class="form-control">
-                                <input type="email" placeholder="Your Email" class="input input-bordered mb-4" required />
-                            </div>
-                            <div class="form-control">
-                                <textarea class="textarea textarea-bordered mb-4" placeholder="Your Message" required></textarea>
-                            </div>
-                            <button class="btn btn-md btn-primary bg-green-600 hover:bg-green-700 px-6 py-2">Send Message</button>
-                        </form>
-                    </div>
-                </div>
-                <div class="card bg-white shadow-xl">
-                    <div class="card-body">
-                        <h3 class="card-title mb-4">Contact Information</h3>
-                        <div class="space-y-4">
-                            <div class="flex items-center">
-                                <i class="fas fa-map-marker-alt text-green-600 w-8"></i>
-                                <p>House 123, Road 8, Mirpur DOHS, Dhaka 1216</p>
-                                
-                            </div>
-                            <div class="flex items-center">
-                                <i class="fas fa-phone text-green-600 w-8"></i>
-                                <p>+880 1518926700</p>
-                            </div>
-                            <div class="flex items-center">
-                                <i class="fas fa-envelope text-green-600 w-8"></i>
-                                <p>ebrikkho@outlook.com</p>
-                            </div>
-                        </div>
-                        <div class="mt-8">
-                            <h3 class="text-xl font-bold mb-4">Follow Us</h3>
-                            <div class="flex space-x-4">
-                                <a href="https://www.facebook.com/profile.php?id=61567919678743" class="w-10 h-10 rounded-full bg-green-100 flex items-center justify-center text-green-600 hover:bg-green-200">
-                                    <i class="fab fa-facebook-f"></i>
-                                </a>
-                                <a href="https://www.instagram.com/ebrikkho" class="w-10 h-10 rounded-full bg-green-100 flex items-center justify-center text-green-600 hover:bg-green-200">
-                                    <i class="fab fa-instagram"></i>
-                                </a>
-                                <a href="https://x.com/ebrikkho" class="w-10 h-10 rounded-full bg-green-100 flex items-center justify-center text-green-600 hover:bg-green-200">
-                                    <i class="fab fa-twitter"></i>
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
+      <div class="container mx-auto px-4">
+        <div class="text-center mb-12">
+          <h2 class="text-3xl font-bold mb-4">Contact Us</h2>
+          <p class="text-gray-600 max-w-2xl mx-auto">
+            Have questions or need assistance? We're here to help you with all
+            your gardening needs.
+          </p>
         </div>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+          <div class="card bg-white shadow-xl">
+            <div class="card-body">
+              <h3 class="card-title mb-4">Get in Touch</h3>
+              <form>
+                <div class="form-control">
+                  <input
+                    type="text"
+                    placeholder="Your Name"
+                    class="input input-bordered mb-4"
+                    required
+                  />
+                </div>
+                <div class="form-control">
+                  <input
+                    type="email"
+                    placeholder="Your Email"
+                    class="input input-bordered mb-4"
+                    required
+                  />
+                </div>
+                <div class="form-control">
+                  <textarea
+                    class="textarea textarea-bordered mb-4"
+                    placeholder="Your Message"
+                    required
+                  ></textarea>
+                </div>
+                <button
+                  class="btn btn-md btn-primary bg-green-600 hover:bg-green-700 px-6 py-2"
+                >
+                  Send Message
+                </button>
+              </form>
+            </div>
+          </div>
+          <div class="card bg-white shadow-xl">
+            <div class="card-body">
+              <h3 class="card-title mb-4">Contact Information</h3>
+              <div class="space-y-4">
+                <div class="flex items-center">
+                  <i class="fas fa-map-marker-alt text-green-600 w-8"></i>
+                  <p>House 123, Road 8, Mirpur DOHS, Dhaka 1216</p>
+                </div>
+                <div class="flex items-center">
+                  <i class="fas fa-phone text-green-600 w-8"></i>
+                  <p>+880 1518926700</p>
+                </div>
+                <div class="flex items-center">
+                  <i class="fas fa-envelope text-green-600 w-8"></i>
+                  <p>ebrikkho@outlook.com</p>
+                </div>
+              </div>
+              <div class="mt-8">
+                <h3 class="text-xl font-bold mb-4">Follow Us</h3>
+                <div class="flex space-x-4">
+                  <a
+                    href="https://www.facebook.com/profile.php?id=61567919678743"
+                    class="w-10 h-10 rounded-full bg-green-100 flex items-center justify-center text-green-600 hover:bg-green-200"
+                  >
+                    <i class="fab fa-facebook-f"></i>
+                  </a>
+                  <a
+                    href="https://www.instagram.com/ebrikkho"
+                    class="w-10 h-10 rounded-full bg-green-100 flex items-center justify-center text-green-600 hover:bg-green-200"
+                  >
+                    <i class="fab fa-instagram"></i>
+                  </a>
+                  <a
+                    href="https://x.com/ebrikkho"
+                    class="w-10 h-10 rounded-full bg-green-100 flex items-center justify-center text-green-600 hover:bg-green-200"
+                  >
+                    <i class="fab fa-twitter"></i>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
     </section>
 
     <!-- Footer -->
     <footer class="bg-gray-900 text-white py-12">
-        <div class="container mx-auto px-4">
-            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
-                <div>
-                    <h3 class="text-xl font-bold mb-4">Ebrikkho</h3>
-                    <p>Bringing nature's beauty to your doorstep with premium plants and professional gardening services.</p>
-                </div>
-                <div>
-                    <h3 class="text-xl font-bold mb-4">Quick Links</h3>
-                    <ul class="space-y-2">
-                        <li><a href="#home" class="hover:text-green-400">Home</a></li>
-                        <li><a href="#shop" class="hover:text-green-400">Shop</a></li>
-                        <li><a href="#services" class="hover:text-green-400">Services</a></li>
-                        <li><a href="#about" class="hover:text-green-400">About</a></li>
-                        <li><a href="#contact" class="hover:text-green-400">Contact</a></li>
-                    </ul>
-                </div>
-                <div>
-                    <h3 class="text-xl font-bold mb-4">Customer Service</h3>
-                    <ul class="space-y-2">
-                        <li><a href="#" class="hover:text-green-400">Shipping Policy</a></li>
-                        <li><a href="#" class="hover:text-green-400">Returns & Refunds</a></li>
-                        <li><a href="#" class="hover:text-green-400">FAQ</a></li>
-                        <li><a href="#" class="hover:text-green-400">Privacy Policy</a></li>
-                    </ul>
-                </div>
-                <div>
-                    <h3 class="text-xl font-bold mb-4">Follow Us</h3>
-                    <div class="flex space-x-4">
-                        <a href="#" class="hover:text-green-400"><i class="fab fa-facebook fa-2x"></i></a>
-                        <a href="#" class="hover:text-green-400"><i class="fab fa-instagram fa-2x"></i></a>
-                        <a href="#" class="hover:text-green-400"><i class="fab fa-twitter fa-2x"></i></a>
-                    </div>
-                </div>
+      <div class="container mx-auto px-4">
+        <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+          <div>
+            <h3 class="text-xl font-bold mb-4">Ebrikkho</h3>
+            <p>
+              Bringing nature's beauty to your doorstep with premium plants and
+              professional gardening services.
+            </p>
+          </div>
+          <div>
+            <h3 class="text-xl font-bold mb-4">Quick Links</h3>
+            <ul class="space-y-2">
+              <li><a href="#home" class="hover:text-green-400">Home</a></li>
+              <li><a href="#shop" class="hover:text-green-400">Shop</a></li>
+              <li>
+                <a href="#services" class="hover:text-green-400">Services</a>
+              </li>
+              <li><a href="#about" class="hover:text-green-400">About</a></li>
+              <li>
+                <a href="#contact" class="hover:text-green-400">Contact</a>
+              </li>
+            </ul>
+          </div>
+          <div>
+            <h3 class="text-xl font-bold mb-4">Customer Service</h3>
+            <ul class="space-y-2">
+              <li>
+                <a href="#" class="hover:text-green-400">Shipping Policy</a>
+              </li>
+              <li>
+                <a href="#" class="hover:text-green-400">Returns & Refunds</a>
+              </li>
+              <li><a href="#" class="hover:text-green-400">FAQ</a></li>
+              <li>
+                <a href="#" class="hover:text-green-400">Privacy Policy</a>
+              </li>
+            </ul>
+          </div>
+          <div>
+            <h3 class="text-xl font-bold mb-4">Follow Us</h3>
+            <div class="flex space-x-4">
+              <a href="#" class="hover:text-green-400"
+                ><i class="fab fa-facebook fa-2x"></i
+              ></a>
+              <a href="#" class="hover:text-green-400"
+                ><i class="fab fa-instagram fa-2x"></i
+              ></a>
+              <a href="#" class="hover:text-green-400"
+                ><i class="fab fa-twitter fa-2x"></i
+              ></a>
             </div>
-            <div class="border-t border-gray-800 mt-8 pt-8 text-center">
-                <p>&copy; 2024 Ebrikkho. All rights reserved.</p>
-            </div>
+          </div>
         </div>
+        <div class="border-t border-gray-800 mt-8 pt-8 text-center">
+          <p>&copy; 2024 Ebrikkho. All rights reserved.</p>
+        </div>
+      </div>
     </footer>
     <div id="app"></div>
     <script type="module" src="/src/main.js"></script>
-</body>
+  </body>
 </html>
