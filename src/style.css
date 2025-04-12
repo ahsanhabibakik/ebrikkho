@@ -1,2 +1,51 @@
 @import "tailwindcss";
 @plugin "daisyui";
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Your custom styles */
+.hero-gradient {
+    background: linear-gradient(135deg, #1a5d1a 0%, #2d8a2d 100%);
+}
+.hero-pattern {
+    background-image: url('https://images.unsplash.com/photo-1466781783364-36c955e42a7f?ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80');
+    background-size: cover;
+    background-position: center;
+    opacity: 0.15;
+}
+.product-card:hover {
+    transform: translateY(-5px);
+    transition: transform 0.3s ease;
+}
+.feature-gradient {
+    background: linear-gradient(135deg, #f0fdf4 0%, #dcfce7 100%);
+}
+.testimonial-gradient {
+    background: linear-gradient(135deg, #f0fdf4 0%, #dcfce7 100%);
+}
+.cta-gradient {
+    background: linear-gradient(135deg, #1a5d1a 0%, #2d8a2d 100%);
+}
+.floating {
+    animation: float 6s ease-in-out infinite;
+}
+@keyframes float {
+    0% { transform: translateY(0px); }
+    50% { transform: translateY(-20px); }
+    100% { transform: translateY(0px); }
+}
+.category-card {
+    transition: all 0.3s ease;
+}
+.category-card:hover {
+    transform: scale(1.05);
+}
+.benefit-icon {
+    transition: all 0.3s ease;
+}
+.benefit-icon:hover {
+    transform: scale(1.2);
+    color: #1a5d1a;
+}
