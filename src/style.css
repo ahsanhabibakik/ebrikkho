@@ -8,14 +8,14 @@ body {
 
 /* Your custom styles */
 .hero-section {
-  background: #fff5eb;
+  background-color: black !important;
+  background-image: none !important;
 }
-/* .hero-pattern {
-  background-image: url("/hero-background.jpg");
-  background-size: cover;
-  background-position: center;
-  opacity: 0.2;
-} */
+
+.hero-pattern {
+  display: none !important;
+}
+
 .product-card:hover {
   transform: translateY(-5px);
   transition: transform 0.3s ease;
