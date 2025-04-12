@@ -3,7 +3,7 @@
 
 /* Your custom styles */
 .hero-gradient {
-  background: linear-gradient(135deg, #fa8128 0%, #e89149 100%);
+  background: linear-gradient(135deg, #ff7839 0%, #ffe6af 100%);
 }
 .hero-pattern {
   background-image: url("/hero-background.jpg");
