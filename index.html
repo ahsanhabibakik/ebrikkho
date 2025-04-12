@@ -12,15 +12,13 @@
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
     />
     <style>
-      .hero-gradient {
-        background: linear-gradient(135deg, #1a5d1a 0%, #2d8a2d 100%);
+      .hero-section {
+        background-color: #fa8128 !important;
+        background-image: none !important;
       }
-      /* .hero-pattern {
-        background-image: url("/hero-background.jpg");
-        background-size: cover;
-        background-position: center;
-        opacity: 0.15;
-      } */
+      .hero-pattern {
+        display: none;
+      }
       .product-card:hover {
         transform: translateY(-5px);
         transition: transform 0.3s ease;
@@ -243,9 +241,9 @@
     <!-- Hero Section -->
     <section
       id="home"
-      class="hero hero-gradient min-h-[400px] sm:min-h-[500px] md:min-h-[700px] text-white relative overflow-hidden"
+      class="hero-section min-h-[400px] sm:min-h-[500px] md:min-h-[700px] text-white relative overflow-hidden"
+      style="background: #fa8128 !important; background-image: none !important"
     >
-      <div class="hero-pattern absolute inset-0"></div>
       <div class="container mx-auto px-4 py-8 sm:py-12 md:py-20 relative z-10">
         <div
           class="grid grid-cols-1 lg:grid-cols-2 gap-6 sm:gap-8 md:gap-12 items-center"

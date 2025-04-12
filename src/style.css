@@ -7,27 +7,27 @@ body {
 }
 
 /* Your custom styles */
-.hero-gradient {
-  background: linear-gradient(135deg, #ff7839 0%, #ffe6af 100%);
+.hero-section {
+  background: #fff5eb;
 }
-.hero-pattern {
+/* .hero-pattern {
   background-image: url("/hero-background.jpg");
   background-size: cover;
   background-position: center;
   opacity: 0.2;
-}
+} */
 .product-card:hover {
   transform: translateY(-5px);
   transition: transform 0.3s ease;
 }
 .feature-gradient {
-  background: linear-gradient(135deg, #fff5eb 0%, #ffe4cc 100%);
+  background: #fff5eb;
 }
 .testimonial-gradient {
-  background: linear-gradient(135deg, #fff5eb 0%, #ffe4cc 100%);
+  background: #fff5eb;
 }
 .cta-gradient {
-  background: linear-gradient(135deg, #fa8128 0%, #e89149 100%);
+  background: #fa8128;
 }
 .floating {
   animation: float 6s ease-in-out infinite;
@@ -94,7 +94,7 @@ body {
 }
 
 .special-offer-gradient {
-  background: linear-gradient(to bottom, #ffd54f 0%, #ffa726 50%, #ffd54f 100%);
+  background: #ffd54f;
   box-shadow: 0 0 20px rgba(255, 167, 38, 0.3);
 }
 
