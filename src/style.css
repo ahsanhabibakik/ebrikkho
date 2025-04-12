@@ -10,10 +10,13 @@ body {
 .hero-section {
   background-color: black !important;
   background-image: none !important;
+  background: black !important;
 }
 
 .hero-pattern {
   display: none !important;
+  opacity: 0 !important;
+  background: none !important;
 }
 
 .product-card:hover {
