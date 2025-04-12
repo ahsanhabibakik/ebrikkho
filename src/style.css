@@ -87,3 +87,17 @@
 .bg-primary {
   background-color: #fa8128 !important;
 }
+
+.special-offer-gradient {
+  background: linear-gradient(to bottom, #ffd54f 0%, #ffa726 50%, #ffd54f 100%);
+  box-shadow: 0 0 20px rgba(255, 167, 38, 0.3);
+}
+
+.special-offer-glow {
+  box-shadow: 0 0 15px rgba(255, 167, 38, 0.5);
+  transition: box-shadow 0.3s ease;
+}
+
+.special-offer-glow:hover {
+  box-shadow: 0 0 25px rgba(255, 167, 38, 0.7);
+}
