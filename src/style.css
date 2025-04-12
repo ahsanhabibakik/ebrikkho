@@ -1,6 +1,11 @@
 @import "tailwindcss";
 @plugin "daisyui";
 
+/* Base styles */
+body {
+  font-family: "Times New Roman", Times, serif;
+}
+
 /* Your custom styles */
 .hero-gradient {
   background: linear-gradient(135deg, #ff7839 0%, #ffe6af 100%);
