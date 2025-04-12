@@ -1,51 +1,89 @@
 @import "tailwindcss";
 @plugin "daisyui";
 
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
-
 /* Your custom styles */
 .hero-gradient {
-    background: linear-gradient(135deg, #1a5d1a 0%, #2d8a2d 100%);
+  background: linear-gradient(135deg, #fa8128 0%, #e89149 100%);
 }
 .hero-pattern {
-    background-image: url('https://images.unsplash.com/photo-1466781783364-36c955e42a7f?ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80');
-    background-size: cover;
-    background-position: center;
-    opacity: 0.15;
+  background-image: url("/hero-background.jpg");
+  background-size: cover;
+  background-position: center;
+  opacity: 0.2;
 }
 .product-card:hover {
-    transform: translateY(-5px);
-    transition: transform 0.3s ease;
+  transform: translateY(-5px);
+  transition: transform 0.3s ease;
 }
 .feature-gradient {
-    background: linear-gradient(135deg, #f0fdf4 0%, #dcfce7 100%);
+  background: linear-gradient(135deg, #fff5eb 0%, #ffe4cc 100%);
 }
 .testimonial-gradient {
-    background: linear-gradient(135deg, #f0fdf4 0%, #dcfce7 100%);
+  background: linear-gradient(135deg, #fff5eb 0%, #ffe4cc 100%);
 }
 .cta-gradient {
-    background: linear-gradient(135deg, #1a5d1a 0%, #2d8a2d 100%);
+  background: linear-gradient(135deg, #fa8128 0%, #e89149 100%);
 }
 .floating {
-    animation: float 6s ease-in-out infinite;
+  animation: float 6s ease-in-out infinite;
 }
 @keyframes float {
-    0% { transform: translateY(0px); }
-    50% { transform: translateY(-20px); }
-    100% { transform: translateY(0px); }
+  0% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-20px);
+  }
+  100% {
+    transform: translateY(0px);
+  }
 }
 .category-card {
-    transition: all 0.3s ease;
+  transition: all 0.3s ease;
 }
 .category-card:hover {
-    transform: scale(1.05);
+  transform: scale(1.05);
 }
 .benefit-icon {
-    transition: all 0.3s ease;
+  transition: all 0.3s ease;
 }
 .benefit-icon:hover {
-    transform: scale(1.2);
-    color: #1a5d1a;
+  transform: scale(1.2);
+  color: #fa8128;
+}
+
+.countdown span {
+  background-color: rgba(255, 255, 255, 0.2);
+  padding: 0.125rem 0.5rem;
+  border-radius: 0.25rem;
+}
+
+.rating-input {
+  @apply mask mask-star-2 bg-orange-400;
+}
+
+.social-icon {
+  @apply w-10 h-10 rounded-full bg-orange-100 flex items-center justify-center text-orange-600 hover:bg-orange-200;
+}
+
+.navbar {
+  background-color: #fa8128;
+}
+
+.btn-primary {
+  background-color: #fa8128 !important;
+  border-color: #fa8128 !important;
+}
+
+.btn-primary:hover {
+  background-color: #e89149 !important;
+  border-color: #e89149 !important;
+}
+
+.text-primary {
+  color: #fa8128 !important;
+}
+
+.bg-primary {
+  background-color: #fa8128 !important;
 }

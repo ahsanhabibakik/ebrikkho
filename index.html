@@ -96,7 +96,7 @@
     </div>
 
     <!-- Special Offer Banner -->
-    <div class="bg-[#2d8a2d] text-white py-3">
+    <div class="bg-primary text-white py-3">
       <div class="container mx-auto px-4">
         <div
           class="flex flex-col sm:flex-row items-center justify-center gap-2 sm:gap-4"
@@ -116,29 +116,25 @@
               class="countdown font-mono text-sm sm:text-base flex items-center gap-1"
             >
               <span
-                class="bg-white/20 px-2 py-0.5 rounded"
-                style="--value: 7"
+                class="bg-white/20 px-2 py-0.5 rounded countdown"
                 aria-live="polite"
                 aria-label="7"
                 >7</span
               >d
               <span
-                class="bg-white/20 px-2 py-0.5 rounded"
-                style="--value: 23"
+                class="bg-white/20 px-2 py-0.5 rounded countdown"
                 aria-live="polite"
                 aria-label="23"
                 >23</span
               >h
               <span
-                class="bg-white/20 px-2 py-0.5 rounded"
-                style="--value: 59"
+                class="bg-white/20 px-2 py-0.5 rounded countdown"
                 aria-live="polite"
                 aria-label="59"
                 >59</span
               >m
               <span
-                class="bg-white/20 px-2 py-0.5 rounded"
-                style="--value: 59"
+                class="bg-white/20 px-2 py-0.5 rounded countdown"
                 aria-live="polite"
                 aria-label="59"
                 >59</span
@@ -150,13 +146,13 @@
     </div>
 
     <!-- Navbar Section -->
-    <div class="navbar bg-[#ec9a2e] shadow-sm">
+    <div class="navbar shadow-sm">
       <div class="navbar-start">
         <div class="dropdown md:hidden">
           <div
             tabindex="0"
             role="button"
-            class="btn btn-ghost btn-circle text-white"
+            class="btn btn-ghost btn-circle text-white hover:text-orange-200"
           >
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -183,21 +179,11 @@
           </ul>
         </div>
         <div class="hidden md:flex space-x-6">
-          <a href="#" class="text-white hover:text-green-200 transition-colors"
-            >Home</a
-          >
-          <a href="#" class="text-white hover:text-green-200 transition-colors"
-            >Shop</a
-          >
-          <a href="#" class="text-white hover:text-green-200 transition-colors"
-            >Services</a
-          >
-          <a href="#" class="text-white hover:text-green-200 transition-colors"
-            >About</a
-          >
-          <a href="#" class="text-white hover:text-green-200 transition-colors"
-            >Contact</a
-          >
+          <a href="#" class="text-white hover:text-orange-200">Home</a>
+          <a href="#" class="text-white hover:text-orange-200">Shop</a>
+          <a href="#" class="text-white hover:text-orange-200">Services</a>
+          <a href="#" class="text-white hover:text-orange-200">About</a>
+          <a href="#" class="text-white hover:text-orange-200">Contact</a>
         </div>
       </div>
       <div class="navbar-center">
@@ -212,6 +198,7 @@
       <div class="navbar-end">
         <button
           class="btn btn-ghost btn-circle text-white hover:text-green-200 transition-colors"
+          aria-label="Search"
         >
           <svg
             xmlns="http://www.w3.org/2000/svg"
@@ -230,6 +217,7 @@
         </button>
         <button
           class="btn btn-ghost btn-circle text-white hover:text-green-200 transition-colors"
+          aria-label="Notifications"
         >
           <div class="indicator">
             <svg
@@ -310,28 +298,33 @@
                   <div class="rating rating-sm">
                     <input
                       type="radio"
-                      class="mask mask-star-2 bg-orange-400"
+                      class="rating-input"
                       checked
+                      aria-label="1 star"
                     />
                     <input
                       type="radio"
-                      class="mask mask-star-2 bg-orange-400"
+                      class="rating-input"
                       checked
+                      aria-label="2 stars"
                     />
                     <input
                       type="radio"
-                      class="mask mask-star-2 bg-orange-400"
+                      class="rating-input"
                       checked
+                      aria-label="3 stars"
                     />
                     <input
                       type="radio"
-                      class="mask mask-star-2 bg-orange-400"
+                      class="rating-input"
                       checked
+                      aria-label="4 stars"
                     />
                     <input
                       type="radio"
-                      class="mask mask-star-2 bg-orange-400"
+                      class="rating-input"
                       checked
+                      aria-label="5 stars"
                     />
                   </div>
                   <span class="ml-2 text-sm md:text-base"
@@ -625,7 +618,7 @@
     </section>
 
     <!-- Special Offer -->
-    <section class="py-12 md:py-16 bg-green-50">
+    <section class="py-12 md:py-16 bg-orange-50">
       <div class="container mx-auto px-4">
         <div class="card bg-white shadow-xl">
           <div class="grid grid-cols-1 md:grid-cols-2">
@@ -745,7 +738,7 @@
     </section>
 
     <!-- How It Works -->
-    <section class="py-16 bg-gradient-to-b from-green-50 to-white">
+    <section class="py-16 bg-gradient-to-b from-orange-50 to-white">
       <div class="container mx-auto px-4">
         <div class="text-center mb-12">
           <h2 class="text-3xl font-bold mb-4">How It Works</h2>
@@ -844,28 +837,33 @@
                   <div class="rating rating-sm">
                     <input
                       type="radio"
-                      class="mask mask-star-2 bg-orange-400"
+                      class="rating-input"
                       checked
+                      aria-label="1 star"
                     />
                     <input
                       type="radio"
-                      class="mask mask-star-2 bg-orange-400"
+                      class="rating-input"
                       checked
+                      aria-label="2 stars"
                     />
                     <input
                       type="radio"
-                      class="mask mask-star-2 bg-orange-400"
+                      class="rating-input"
                       checked
+                      aria-label="3 stars"
                     />
                     <input
                       type="radio"
-                      class="mask mask-star-2 bg-orange-400"
+                      class="rating-input"
                       checked
+                      aria-label="4 stars"
                     />
                     <input
                       type="radio"
-                      class="mask mask-star-2 bg-orange-400"
+                      class="rating-input"
                       checked
+                      aria-label="5 stars"
                     />
                   </div>
                 </div>
@@ -893,28 +891,33 @@
                   <div class="rating rating-sm">
                     <input
                       type="radio"
-                      class="mask mask-star-2 bg-orange-400"
+                      class="rating-input"
                       checked
+                      aria-label="1 star"
                     />
                     <input
                       type="radio"
-                      class="mask mask-star-2 bg-orange-400"
+                      class="rating-input"
                       checked
+                      aria-label="2 stars"
                     />
                     <input
                       type="radio"
-                      class="mask mask-star-2 bg-orange-400"
+                      class="rating-input"
                       checked
+                      aria-label="3 stars"
                     />
                     <input
                       type="radio"
-                      class="mask mask-star-2 bg-orange-400"
+                      class="rating-input"
                       checked
+                      aria-label="4 stars"
                     />
                     <input
                       type="radio"
-                      class="mask mask-star-2 bg-orange-400"
+                      class="rating-input"
                       checked
+                      aria-label="5 stars"
                     />
                   </div>
                 </div>
@@ -942,28 +945,33 @@
                   <div class="rating rating-sm">
                     <input
                       type="radio"
-                      class="mask mask-star-2 bg-orange-400"
+                      class="rating-input"
                       checked
+                      aria-label="1 star"
                     />
                     <input
                       type="radio"
-                      class="mask mask-star-2 bg-orange-400"
+                      class="rating-input"
                       checked
+                      aria-label="2 stars"
                     />
                     <input
                       type="radio"
-                      class="mask mask-star-2 bg-orange-400"
+                      class="rating-input"
                       checked
+                      aria-label="3 stars"
                     />
                     <input
                       type="radio"
-                      class="mask mask-star-2 bg-orange-400"
+                      class="rating-input"
                       checked
+                      aria-label="4 stars"
                     />
                     <input
                       type="radio"
-                      class="mask mask-star-2 bg-orange-400"
+                      class="rating-input"
                       checked
+                      aria-label="5 stars"
                     />
                   </div>
                 </div>
@@ -1024,7 +1032,7 @@
     </section>
 
     <!-- Contact Section -->
-    <section id="contact" class="py-16 bg-gray-50">
+    <section id="contact" class="py-16 bg-orange-50">
       <div class="container mx-auto px-4">
         <div class="text-center mb-12">
           <h2 class="text-3xl font-bold mb-4">Contact Us</h2>
@@ -1091,22 +1099,22 @@
                 <div class="flex space-x-4">
                   <a
                     href="https://www.facebook.com/profile.php?id=61567919678743"
-                    class="w-10 h-10 rounded-full bg-green-100 flex items-center justify-center text-green-600 hover:bg-green-200"
-                  >
-                    <i class="fab fa-facebook-f"></i>
-                  </a>
+                    class="social-icon"
+                    aria-label="Facebook"
+                    ><i class="fab fa-facebook-f"></i
+                  ></a>
                   <a
                     href="https://www.instagram.com/ebrikkho"
-                    class="w-10 h-10 rounded-full bg-green-100 flex items-center justify-center text-green-600 hover:bg-green-200"
-                  >
-                    <i class="fab fa-instagram"></i>
-                  </a>
+                    class="social-icon"
+                    aria-label="Instagram"
+                    ><i class="fab fa-instagram"></i
+                  ></a>
                   <a
                     href="https://x.com/ebrikkho"
-                    class="w-10 h-10 rounded-full bg-green-100 flex items-center justify-center text-green-600 hover:bg-green-200"
-                  >
-                    <i class="fab fa-twitter"></i>
-                  </a>
+                    class="social-icon"
+                    aria-label="Twitter"
+                    ><i class="fab fa-twitter"></i
+                  ></a>
                 </div>
               </div>
             </div>
@@ -1158,14 +1166,23 @@
           <div>
             <h3 class="text-xl font-bold mb-4">Follow Us</h3>
             <div class="flex space-x-4">
-              <a href="#" class="hover:text-green-400"
-                ><i class="fab fa-facebook fa-2x"></i
+              <a
+                href="https://www.facebook.com/profile.php?id=61567919678743"
+                class="social-icon"
+                aria-label="Facebook"
+                ><i class="fab fa-facebook-f"></i
               ></a>
-              <a href="#" class="hover:text-green-400"
-                ><i class="fab fa-instagram fa-2x"></i
+              <a
+                href="https://www.instagram.com/ebrikkho"
+                class="social-icon"
+                aria-label="Instagram"
+                ><i class="fab fa-instagram"></i
               ></a>
-              <a href="#" class="hover:text-green-400"
-                ><i class="fab fa-twitter fa-2x"></i
+              <a
+                href="https://x.com/ebrikkho"
+                class="social-icon"
+                aria-label="Twitter"
+                ><i class="fab fa-twitter"></i
               ></a>
             </div>
           </div>
