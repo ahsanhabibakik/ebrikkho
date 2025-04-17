@@ -1,9 +1,10 @@
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;700&display=swap');
 @import "tailwindcss";
 @plugin "daisyui";
 
 /* Base styles */
 body {
-  font-family: "Times New Roman", Times, serif;
+  font-family: 'Dancing Script', cursive;
 }
 
 /* Your custom styles */
@@ -30,7 +31,7 @@ body {
   background: #fff5eb;
 }
 .cta-gradient {
-  background: #fa8128;
+  background: black;
 }
 .floating {
   animation: float 6s ease-in-out infinite;
@@ -75,7 +76,7 @@ body {
 }
 
 .navbar {
-  background-color: #fa8128;
+  background-color: #000000;
 }
 
 .btn-primary {
@@ -97,8 +98,8 @@ body {
 }
 
 .special-offer-gradient {
-  background: #ffd54f;
-  box-shadow: 0 0 20px rgba(255, 167, 38, 0.3);
+  background: #ffffff;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
 }
 
 .special-offer-glow {
