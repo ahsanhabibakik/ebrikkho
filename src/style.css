@@ -1,10 +1,10 @@
-@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;700&display=swap");
 @import "tailwindcss";
 @plugin "daisyui";
 
 /* Base styles */
 body {
-  font-family: 'Dancing Script', cursive;
+  font-family: "Dancing Script", cursive;
 }
 
 /* Your custom styles */
@@ -61,10 +61,44 @@ body {
   color: #fa8128;
 }
 
+/* Countdown Timer Styles */
+.countdown {
+  animation: pulse 2s infinite;
+}
+
 .countdown span {
   background-color: rgba(255, 255, 255, 0.2);
   padding: 0.125rem 0.5rem;
   border-radius: 0.25rem;
+  animation: bounce 1s infinite;
+  transition: all 0.3s ease;
+}
+
+.countdown span:hover {
+  transform: scale(1.1);
+  background-color: rgba(255, 255, 255, 0.3);
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.02);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+@keyframes bounce {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-2px);
+  }
 }
 
 .rating-input {
