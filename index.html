@@ -1216,6 +1216,94 @@
       </div>
     </footer>
     <div id="app"></div>
+    <!-- Search Modal -->
+    <div
+      id="searchModal"
+      class="fixed inset-0 z-50 hidden flex items-start justify-center"
+    >
+      <div
+        class="bg-white bg-opacity-95 w-full max-w-3xl mt-20 rounded-lg shadow-xl"
+      >
+        <div class="p-4 border-b border-gray-200">
+          <div class="flex items-center gap-4">
+            <div class="flex-1">
+              <input
+                type="text"
+                id="searchInput"
+                placeholder="Search for plants, tools, or services..."
+                class="input input-bordered w-full bg-white text-gray-800 placeholder-gray-500 border-2 border-gray-200 focus:border-orange-500"
+              />
+            </div>
+            <button
+              id="closeSearch"
+              class="btn btn-ghost btn-circle"
+              aria-label="Close search"
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                class="h-6 w-6"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M6 18L18 6M6 6l12 12"
+                />
+              </svg>
+            </button>
+          </div>
+        </div>
+        <div id="searchResults" class="p-4 max-h-96 overflow-y-auto">
+          <!-- Default search suggestions will be shown here -->
+          <div
+            id="defaultSuggestions"
+            class="grid grid-cols-1 md:grid-cols-2 gap-4"
+          >
+            <div
+              class="p-4 border border-gray-200 rounded-lg hover:bg-gray-50 cursor-pointer"
+            >
+              <h3 class="font-bold text-lg mb-2">Popular Plants</h3>
+              <ul class="space-y-2">
+                <li class="text-orange-600 hover:text-orange-800">
+                  Monstera Deliciosa
+                </li>
+                <li class="text-orange-600 hover:text-orange-800">
+                  Snake Plant
+                </li>
+                <li class="text-orange-600 hover:text-orange-800">
+                  Fiddle Leaf Fig
+                </li>
+                <li class="text-orange-600 hover:text-orange-800">
+                  Peace Lily
+                </li>
+              </ul>
+            </div>
+            <div
+              class="p-4 border border-gray-200 rounded-lg hover:bg-gray-50 cursor-pointer"
+            >
+              <h3 class="font-bold text-lg mb-2">Our Services</h3>
+              <ul class="space-y-2">
+                <li class="text-orange-600 hover:text-orange-800">
+                  Garden Design
+                </li>
+                <li class="text-orange-600 hover:text-orange-800">
+                  Plant Maintenance
+                </li>
+                <li class="text-orange-600 hover:text-orange-800">
+                  Plant Installation
+                </li>
+                <li class="text-orange-600 hover:text-orange-800">
+                  Plant Consultation
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
     <script type="module" src="/src/main.js"></script>
   </body>
 </html>
