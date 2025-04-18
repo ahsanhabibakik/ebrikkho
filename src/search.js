@@ -60,7 +60,7 @@ const services = [
 
 // Initialize search functionality
 export function initializeSearch() {
-  const searchButton = document.querySelector('[aria-label="Search"]');
+  const searchButton = document.getElementById("searchButton");
   const searchModal = document.getElementById("searchModal");
   const closeSearch = document.getElementById("closeSearch");
   const searchInput = document.getElementById("searchInput");
@@ -94,7 +94,7 @@ export function initializeSearch() {
   function performSearch(query) {
     query = query.toLowerCase().trim();
 
-    if (query.length < 2) {
+    if (query.length === 0) {
       showDefaultSuggestions();
       return;
     }
@@ -112,6 +112,19 @@ export function initializeSearch() {
         service.description.toLowerCase().includes(query)
     );
 
+    // Sort results to prioritize items that start with the query
+    const sortByStartsWith = (a, b) => {
+      const aStartsWith = a.name.toLowerCase().startsWith(query);
+      const bStartsWith = b.name.toLowerCase().startsWith(query);
+
+      if (aStartsWith && !bStartsWith) return -1;
+      if (!aStartsWith && bStartsWith) return 1;
+      return 0;
+    };
+
+    productResults.sort(sortByStartsWith);
+    serviceResults.sort(sortByStartsWith);
+
     // Display results
     let resultsHTML = "";
 
@@ -119,9 +132,14 @@ export function initializeSearch() {
       resultsHTML +=
         '<div class="mb-4"><h3 class="text-lg font-semibold mb-2">Products</h3>';
       productResults.forEach((product) => {
+        const isExactMatch = product.name.toLowerCase().startsWith(query);
         resultsHTML += `
-          <div class="flex items-center gap-4 p-2 hover:bg-gray-100 rounded-lg cursor-pointer">
-            <img src="${product.image}" alt="${product.name}" class="w-16 h-16 object-cover rounded-lg">
+          <div class="flex items-center gap-4 p-2 hover:bg-gray-100 rounded-lg cursor-pointer ${
+            isExactMatch ? "bg-orange-50" : ""
+          }">
+            <img src="${product.image}" alt="${
+          product.name
+        }" class="w-16 h-16 object-cover rounded-lg">
             <div>
               <h4 class="font-medium">${product.name}</h4>
               <p class="text-orange-600">${product.price}</p>
@@ -136,8 +154,11 @@ export function initializeSearch() {
       resultsHTML +=
         '<div><h3 class="text-lg font-semibold mb-2">Services</h3>';
       serviceResults.forEach((service) => {
+        const isExactMatch = service.name.toLowerCase().startsWith(query);
         resultsHTML += `
-          <div class="flex items-center gap-4 p-2 hover:bg-gray-100 rounded-lg cursor-pointer">
+          <div class="flex items-center gap-4 p-2 hover:bg-gray-100 rounded-lg cursor-pointer ${
+            isExactMatch ? "bg-orange-50" : ""
+          }">
             <div class="w-16 h-16 rounded-full bg-orange-200 flex items-center justify-center">
               <i class="${service.icon} text-2xl text-orange-500"></i>
             </div>

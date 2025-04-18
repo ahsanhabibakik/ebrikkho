@@ -187,24 +187,32 @@
             class="menu menu-sm dropdown-content bg-white text-orange-700 text-5xl rounded-box z-10 mt-3 w-52 p-2 shadow"
           >
             <li class="text-orange-700 text-5xl hover:text-orange-900">
-              <a>Homepage</a>
+              <a href="#home">Homepage</a>
             </li>
-            <li class="text-orange-700 hover:text-orange-900"><a>Shop</a></li>
             <li class="text-orange-700 hover:text-orange-900">
-              <a>Services</a>
+              <a href="#shop">Shop</a>
             </li>
-            <li class="text-orange-700 hover:text-orange-900"><a>About</a></li>
             <li class="text-orange-700 hover:text-orange-900">
-              <a>Contact</a>
+              <a href="#services">Services</a>
+            </li>
+            <li class="text-orange-700 hover:text-orange-900">
+              <a href="#about">About</a>
+            </li>
+            <li class="text-orange-700 hover:text-orange-900">
+              <a href="#contact">Contact</a>
             </li>
           </ul>
         </div>
         <div class="hidden md:flex text-l space-x-6">
-          <a href="#" class="text-white hover:text-orange-900">Home</a>
-          <a href="#" class="text-white hover:text-orange-900">Shop</a>
-          <a href="#" class="text-white hover:text-orange-900">Services</a>
-          <a href="#" class="text-white hover:text-orange-900">About</a>
-          <a href="#" class="text-white hover:text-orange-900">Contact</a>
+          <a href="#home" class="text-white hover:text-orange-900">Home</a>
+          <a href="#shop" class="text-white hover:text-orange-900">Shop</a>
+          <a href="#services" class="text-white hover:text-orange-900"
+            >Services</a
+          >
+          <a href="#about" class="text-white hover:text-orange-900">About</a>
+          <a href="#contact" class="text-white hover:text-orange-900"
+            >Contact</a
+          >
         </div>
       </div>
       <div class="navbar-center">
@@ -220,6 +228,7 @@
         <button
           class="btn btn-ghost btn-circle text-white hover:text-white transition-colors"
           aria-label="Search"
+          id="searchButton"
         >
           <svg
             xmlns="http://www.w3.org/2000/svg"
