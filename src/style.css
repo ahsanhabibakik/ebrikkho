@@ -1,0 +1,146 @@
+@import url("https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;700&display=swap");
+@import "tailwindcss";
+@plugin "daisyui";
+
+/* Base styles */
+body {
+  font-family: "Playfair Display", serif;
+}
+
+/* Your custom styles */
+.hero-section {
+  background-color: rgb(0, 0, 0) !important;
+  background-image: none !important;
+  background: black !important;
+}
+
+.hero-pattern {
+  display: none !important;
+  opacity: 0 !important;
+  background: none !important;
+}
+
+.product-card:hover {
+  transform: translateY(-5px);
+  transition: transform 0.3s ease;
+}
+.feature-gradient {
+  background: #fff5eb;
+}
+.testimonial-gradient {
+  background: #fff5eb;
+}
+.cta-gradient {
+  background: black;
+}
+.floating {
+  animation: float 6s ease-in-out infinite;
+}
+@keyframes float {
+  0% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-20px);
+  }
+  100% {
+    transform: translateY(0px);
+  }
+}
+.category-card {
+  transition: all 0.3s ease;
+}
+.category-card:hover {
+  transform: scale(1.05);
+}
+.benefit-icon {
+  transition: all 0.3s ease;
+}
+.benefit-icon:hover {
+  transform: scale(1.2);
+  color: #fa8128;
+}
+
+/* Countdown Timer Styles */
+.countdown {
+  animation: pulse 2s infinite;
+}
+
+.countdown span {
+  background-color: rgba(255, 255, 255, 0.2);
+  padding: 0.125rem 0.5rem;
+  border-radius: 0.25rem;
+  animation: bounce 1s infinite;
+  transition: all 0.3s ease;
+}
+
+.countdown span:hover {
+  transform: scale(1.1);
+  background-color: rgba(255, 255, 255, 0.3);
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.02);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+@keyframes bounce {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-2px);
+  }
+}
+
+.rating-input {
+  @apply mask mask-star-2 bg-orange-400;
+}
+
+.social-icon {
+  @apply w-10 h-10 rounded-full bg-orange-100 flex items-center justify-center text-orange-600 hover:bg-orange-200;
+}
+
+.navbar {
+  background-color: #000000;
+}
+
+.btn-primary {
+  background-color: #fa8128 !important;
+  border-color: #fa8128 !important;
+}
+
+.btn-primary:hover {
+  background-color: #e89149 !important;
+  border-color: #e89149 !important;
+}
+
+.text-primary {
+  color: #fa8128 !important;
+}
+
+.bg-primary {
+  background-color: #fa8128 !important;
+}
+
+.special-offer-gradient {
+  background: #f5d1b8;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+}
+
+.special-offer-glow {
+  box-shadow: 0 0 15px rgba(255, 167, 38, 0.5);
+  transition: box-shadow 0.3s ease;
+}
+
+.special-offer-glow:hover {
+  box-shadow: 0 0 25px rgba(255, 167, 38, 0.7);
+}
